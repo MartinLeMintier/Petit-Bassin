@@ -56,17 +56,17 @@
 	            </div> 
 
 				<div class="main-login main-center">
-					<form class="form-horizontal" method="post" action="#">
+					<form method="GET" action="traitementdebut.php" class="form-horizontal" method="post" action="#">
 						
-						<div class="ui-widget">
-            <label>Type de compte : </label>
-            <select id="combobox">
-                <option></option>
-                <option value="Utilisateur">Utilisateur</option>
-                <option value="Admin">Administrateur</option>
-               
-          </select>
-          </div>
+											<div class="ui-widget">
+								<label>Type de compte : </label>
+								<select name="choix" id="combobox">
+									<option></option>
+									<option value="Utilisateur">Utilisateur</option>
+									<option value="Admin">Administrateur</option>
+								   
+							  </select>
+							  </div>
 
 						<div class="form-group">
 							<label for="email" class="cols-sm-2 control-label">Email</label>
@@ -91,7 +91,7 @@
 						
 
 						<div class="form-group ">
-							<button type="button" class="btn btn-primary btn-lg btn-block login-button">Se connecter</button>
+							<button type="submit" class="btn btn-primary btn-lg btn-block login-button">Se connecter</button>
 						</div>
 						
 					</form>
