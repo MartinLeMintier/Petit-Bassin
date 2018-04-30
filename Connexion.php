@@ -82,7 +82,7 @@
 							<label for="username" class="cols-sm-2 control-label">Pseudo</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
 									<input type="text" class="form-control" name="username" id="username"  placeholder="Entrez votre pseudo"/>
 								</div>
 							</div>
