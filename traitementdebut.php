@@ -44,6 +44,7 @@ if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))
 							<strong>Admin</strong> : <?php echo $donnees['nom']; ?><br />
 							l'amin est : <?php echo $donnees['prenom']; ?>, et son adresse mail est <?php echo $donnees['Adresse_mail']; ?> !<br />
 						   </p>
+						   <p>Cliquez <a href="./admin.php">ici</a> 
 						<?php
 						
 					}

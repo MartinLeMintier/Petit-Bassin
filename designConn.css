@@ -109,14 +109,17 @@ input::-webkit-input-placeholder {
   header{
 
     top:0px;
-    background-image: url("images/fondconn.jpg");
+   /* background-image: url("images/fondconn.jpg");*/
+   background-color: #4F8BB0;
     border-bottom: 5px solid white;
+     color: white;
     
     height:450px;
   }
+  
   #image{
     margin-top: -180px;
     float: left;
-
+    position: fixed;
     margin-left: 450px;
   }
