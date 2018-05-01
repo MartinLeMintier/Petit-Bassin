@@ -10,7 +10,7 @@ body, html{
      height: 100%;
  	background-repeat: no-repeat;
  	background-color: #BED7E6;
- 	font-family: 'Oxygen', sans-serif;
+ 	font-family: 'Oxygen', sans-serif !important;
 }
 
 .main{
@@ -43,6 +43,7 @@ hr{
 label{
 	margin-bottom: 15px;
 }
+
 
 input,
 input::-webkit-input-placeholder {
@@ -118,9 +119,9 @@ input::-webkit-input-placeholder {
   }
 
 #image{
-    margin-top: -150px;
-    float: left;
-    margin-left: 450px;
-    width: 10%;
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+    width: 170px;
   
   }
