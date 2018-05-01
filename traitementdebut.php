@@ -38,13 +38,14 @@ if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))
 				if($donnees['Adresse_mail']==$adresse_mail)
 				{
 					if($donnees['mdp']==$username)
-					{					
+					{			
+						header('Location: Admin.php');		
 						?>
 							<p>
 							<strong>Admin</strong> : <?php echo $donnees['nom']; ?><br />
 							l'amin est : <?php echo $donnees['prenom']; ?>, et son adresse mail est <?php echo $donnees['Adresse_mail']; ?> !<br />
 						   </p>
-						   
+
 						<?php
 						
 						exit;
