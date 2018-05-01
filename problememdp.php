@@ -45,8 +45,9 @@
 			<div class="row main">
 				<div class="panel-heading">
 	               <div class="panel-title text-center">
-	                 <h3>Connexion</h3>
-	               		
+	                 <div class="alert alert-danger">
+						  <strong>Attention!</strong> Probleme de mot de passe
+						</div>
 	               		<hr />
 	               	</div>
 	            </div> 

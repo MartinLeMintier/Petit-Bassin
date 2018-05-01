@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 01 Mai 2018 à 11:27
+-- Généré le :  Mar 01 Mai 2018 à 14:46
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -58,6 +58,13 @@ CREATE TABLE IF NOT EXISTS `auteur` (
   `photodecouv` varchar(50) NOT NULL,
   PRIMARY KEY (`adresse_mail`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `auteur`
+--
+
+INSERT INTO `auteur` (`adresse_mail`, `mdp`, `prenom`, `nom`, `photodepp`, `photodecouv`) VALUES
+('quentin.are@edu.ece.fr', 'quentinare97', 'Quentin', 'Are', 'truc', 'truc');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

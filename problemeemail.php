@@ -27,10 +27,7 @@
 
 		
 	</head>
-
 	
-
-
 	<body>
 	<!-- Header with image -->
 <header class="header_accueil">
@@ -45,8 +42,9 @@
 			<div class="row main">
 				<div class="panel-heading">
 	               <div class="panel-title text-center">
-	                 <h3>Connexion</h3>
-	               		
+	                 <div class="alert alert-danger">
+						  <strong>Attention!</strong> Probleme d'email
+						</div>
 	               		<hr />
 	               	</div>
 	            </div> 
