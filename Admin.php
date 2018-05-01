@@ -28,7 +28,7 @@
 	<nav role="navigation" class="navbar navbar-reverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<img src="images/slip.jpg" class="logo" alt="" />
+				<img src="images/logonew.png" class="logo" alt="" />
 				<a class="navbar-brand" href="#">PloufBook</a>
 			</div>
 			<div class="collapse navbar-collapse">
