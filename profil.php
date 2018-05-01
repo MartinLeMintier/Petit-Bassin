@@ -100,6 +100,10 @@ session_start();
 
 
 	<p> <?php echo $_SESSION['nom']; ?> </p>
+	<p> <?php echo $_SESSION['prenom']; ?> </p>
+	<p> <?php echo $_SESSION['mdp']; ?> </p>
+	<p> <?php echo $_SESSION['ID']; ?> </p>
+	<p> <?php echo $_SESSION['email']; ?> </p>
 
 
 

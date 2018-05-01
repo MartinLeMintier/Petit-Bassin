@@ -94,10 +94,19 @@ if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))
 
 						$newdonnees = $truc->fetch();
 						$truc = $newdonnees['nom'];
+						$truc1 = $newdonnees['prenom'];
+						
+						$truc2 = $newdonnees['mdp'];
+						$truc3 = $newdonnees['ID'];
+						
+						
+						$_SESSION['nom']=$truc;
+						
+						$_SESSION['mdp']=$truc2;
+						$_SESSION['prenom']=$truc1;
+						$_SESSION['ID']=$truc3;
 						
 
-
-						$_SESSION['nom']=$truc;
 
 						header('Location: profil.php');
 							
