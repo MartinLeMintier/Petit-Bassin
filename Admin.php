@@ -21,6 +21,7 @@
 <link rel="shortcut icon" href="images/logonew.png">
 
 
+</script>
 
 <body>
 
@@ -48,49 +49,119 @@
 
 	</header>
 
-
-	<div class="container-fluid2">
+   
+	<div class="container-fluid">
 		<div class=" section1 text-center">
 			<h2>Ajouter un Utilisateur</h2>
 			<hr />
 			
+					<div class="col-sm-12">
+					
+
 					<div class="main-login main-center">
-						<form>
+						<form class="form-horizontal" method="post" action="#">
 
-						<div class="form-group">
-							<label for="email" class="cols-sm-2 control-label">Email</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-at" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="email" id="email"  placeholder="Entrez votre Email"/>
+							<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Nom</label>
+								<div class="cols-sm-10">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+										<input type="text" class="form-control" name="name" id="name"  placeholder="Entrez le nom"  />
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<div class="form-group">
-							<label for="username" class="cols-sm-2 control-label">Pseudo</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-male" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="username" id="username"  placeholder="Entrez votre pseudo"/>
+							<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Prénom</label>
+								<div class="cols-sm-10">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+										<input type="text" class="form-control" name="name" id="name"  placeholder="Entrez le prénom"/>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						
+							<div class="form-group">
+								<label for="email" class="cols-sm-2 control-label">Email</label>
+								<div class="cols-sm-10">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
+										<input type="text" pattern="[a-z0-9._%+-]+@[a-z09.-] +\.[a-z]{2,3}$" required class="form-control" name="email" id="email"  placeholder="Entrez l'Email"/>
+									</div>
+								</div>
+							</div>
 
-						<div class="form-group ">
-							<button type="submit" class="btn btn-primary btn-lg btn-block login-button">Ajouter</button>
-						</div>
-						
-					</form>
+							<div class="form-group">
+								<label for="username" class="cols-sm-2 control-label">Pseudo</label>
+								<div class="cols-sm-10">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-pencil" aria-hidden="true"></i></span>
+										<input type="text" class="form-control" name="username" id="username"  placeholder="Entrez le pseudo"/>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="form-group">
+								<label for="confirm" class="cols-sm-2 control-label">Confirmer Pseudo</label>
+								<div class="cols-sm-10">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-pencil" aria-hidden="true"></i></span>
+										<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirmer le pseudo"/>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group ">
+								<button" type="button" class="btn btn-primary btn-lg btn-block login-button">S'inscire</button>
+							</div>
+
+						</form>
+					</div>
+				
+	</div>
+</div>
+
+</div>
+
+
+<div class="container-fluid">
+		<div class=" section1 text-center">
+			<h2>Supprimer un Utilisateur</h2>
+			<hr />
+			
+					<div class="col-sm-12">
+					
+
+					<div class="main-login main-center">
+						<form class="form-horizontal" method="post" action="#">
+
+							
+
+							<div class="form-group">
+								<label for="email" class="cols-sm-2 control-label">Email</label>
+								<div class="cols-sm-10">
+									<div class="input-group">
+										<span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
+										<input type="text" class="form-control" name="email" id="email"  placeholder="Entrez l'Email"/>
+									</div>
+								</div>
+							</div>
+
+							
+							<div class="form-group ">
+								<button type="button" class="btn btn-primary btn-lg btn-block login-button">Supprimer</button>
+							</div>
+
+						</form>
+					</div>
 				
 	</div>
 
 </div>
+
+
 </div>
-
-
 
 
 
