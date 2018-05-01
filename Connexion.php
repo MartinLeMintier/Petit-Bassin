@@ -39,6 +39,7 @@
 
 			<h1>PloufBook</h1> </div>
 
+
 			<div class="col-sm-12">
 
 			<img id="image" src="images/logonew.png" class="img-responsive logo" alt="logo" />
@@ -46,6 +47,7 @@
 
 
 		</header>
+
 		<div class="container">
 			<div class="row main">
 
