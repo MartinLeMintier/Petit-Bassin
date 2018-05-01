@@ -4,6 +4,7 @@ if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))
 {
 	if(empty($_GET['username']) OR empty($_GET['email']) OR empty($_GET['choix']))
 	{
+		header('Location: Connexion.php');
 		?> <p> Erreur un champ est vide! <p> <?php
 		?><a href="Connexion.php">retourner au menu principale</a><?php
 		exit;
