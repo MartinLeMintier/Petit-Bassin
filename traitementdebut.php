@@ -88,7 +88,19 @@ if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))
 					{			
 
 						$_SESSION['email']=$adresse_mail;
-						header('Location: profil.php');		
+
+						$truc = $bdd->prepare('SELECT * FROM auteur WHERE adresse_mail=?');
+						$truc->execute(array($adresse_mail));
+
+						$newdonnees = $truc->fetch();
+						$truc = $newdonnees['nom'];
+						
+
+
+						$_SESSION['nom']=$truc;
+
+						header('Location: profil.php');
+							
 						?>
 							<p>
 							<strong>utilisateur</strong> : <?php echo $donnees1['nom']; ?><br />

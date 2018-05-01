@@ -99,7 +99,8 @@ session_start();
 
 
 
-	<p> <?php echo $_SESSION['email']; ?> </p>
+	<p> <?php echo $_SESSION['nom']; ?> </p>
+
 
 
 
