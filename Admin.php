@@ -18,7 +18,9 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<link rel="shortcut icon" href="images/slip.jpg">
+<link rel="shortcut icon" href="images/logonew.png">
+
+
 
 <body>
 

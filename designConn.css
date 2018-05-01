@@ -116,10 +116,11 @@ input::-webkit-input-placeholder {
     
     height:450px;
   }
-  
-  #image{
-    margin-top: -180px;
+
+#image{
+    margin-top: -150px;
     float: left;
-    position: fixed;
     margin-left: 450px;
+    width: 10%;
+  
   }

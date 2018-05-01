@@ -64,7 +64,10 @@ header h1{
 .panel-title{
     margin-top: -40px;
 }
+h3{
+    font-size:50px;
 
+}
 
 h1.title { 
 	font-size: 50px;
