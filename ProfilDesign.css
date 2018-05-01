@@ -1,0 +1,143 @@
+.container-fluid{
+	background-color: #4F8BB0;
+}
+.navbarli a, .navbar .navbar-brand {
+    color: white !important;
+}
+
+
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: black !important;
+    background-color: #fff !important;
+}
+.collapse ul li a {
+    color: white;
+}
+
+nav a:visited,.navbar-nav{
+	color: red;
+}
+
+.navbar-inverse  {
+    border-color: transparent;
+    color: red !important;
+}
+.logo{
+	float: left;
+    width: 50px;
+	
+	
+}
+
+header h1{
+    text-align: center;
+    font-weight: bold;
+    padding-top:150px;
+    font-family: 'Museo', serif;
+    font-size: 8em;
+    font-weight: normal;
+    margin: 0 0 0 10px;
+  }
+
+  header{
+
+    top:0px;
+    margin-top: -22px;
+    background-image: url("images/Image1.jpg");
+
+    border-bottom: 5px solid black;
+    border-top:5px solid black;;
+     color: ;
+     background-size: cover;
+
+    
+    height:450px;
+  }
+
+
+.main{
+ 	margin-top: 70px;
+}
+
+.panel-title{
+    margin-top: -40px;
+}
+h3{
+    font-size:50px;
+
+
+}
+.section1{
+    padding-top: 10px;
+    margin-top: -20px;
+    
+
+}
+
+h1.title { 
+	font-size: 50px;
+	font-family: 'Passion One', cursive; 
+	font-weight: 400; 
+}
+
+hr{
+	width: 10%;
+	color: #fff;
+}
+
+.form-group{
+	margin-bottom: 15px;
+
+}
+
+label{
+	margin-bottom: 15px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 11px;
+    padding-top: 3px;
+}
+
+
+
+.main-login{
+ 	background-color: #fff;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+
+}
+
+.main-center{
+ 	margin-top: 30px;
+ 	margin: 0 auto;
+ 	max-width: 900px;
+    padding: 40px 40px;
+
+
+}
+
+
+h2{
+    color:white !important;
+    font-family: 'Avantgarde', 'TeX Gyre Adventor', 'URW Gothic L', sans-serif!important; 
+}
+
+
+
+.PP{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -100px;
+    width: 200px;
+}
+

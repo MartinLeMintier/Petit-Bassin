@@ -1,10 +1,11 @@
 <?php
 
+session_start();
+
 if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))	
 {
 	if(empty($_GET['username']) OR empty($_GET['email']) OR empty($_GET['choix']))
 	{
-		header('Location: Connexion.php');
 		?> <p> Erreur un champ est vide! <p> <?php
 		?><a href="Connexion.php">retourner au menu principale</a><?php
 		exit;
@@ -14,6 +15,8 @@ if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))
 		$username = $_GET['username'];
 		$adresse_mail = $_GET['email'];
 		$choix = $_GET['choix'];
+
+
 		
 		try
 		{
@@ -41,7 +44,15 @@ if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))
 				if($donnees['Adresse_mail']==$adresse_mail)
 				{
 					if($donnees['mdp']==$username)
-					{			
+					{	
+
+
+						
+
+
+
+
+
 						header('Location: Admin.php');		
 						?>
 							<p>
@@ -75,7 +86,9 @@ if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))
 				{
 					if($donnees1['mdp']==$username)
 					{			
-						//header('Location: Admin.php');		
+
+						$_SESSION['email']=$adresse_mail;
+						header('Location: profil.php');		
 						?>
 							<p>
 							<strong>utilisateur</strong> : <?php echo $donnees1['nom']; ?><br />
