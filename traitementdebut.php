@@ -4,7 +4,9 @@ if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))
 {
 	if(empty($_GET['username']) OR empty($_GET['email']) OR empty($_GET['choix']))
 	{
-		echo 'Erreur un champ est vide!';
+		?> <p> Erreur un champ est vide! <p> <?php
+		?><a href="Connexion.php">retourner au menu principale</a><?php
+		exit;
 	}
 	else
 	{		
@@ -18,25 +20,23 @@ if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))
 			$bdd = new PDO('mysql:host=localhost;dbname=petit_bateau;charset=utf8', 'root', '');
 			$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			$monom = $bdd->prepare('SELECT * FROM administrateur');
-			$monom->execute(array($username, $adresse_mail));
+			$monom->execute(array($adresse_mail, $username));
 			
 		}
 		catch(Exception $e)
 		{
-			
 			// En cas d'erreur, on affiche un message et on arrête tout
-				die('Erreur : '.$e->getMessage());
+			die('Erreur : '.$e->getMessage());
 		}
-		
-		if($monom)
-		{
 
-			if($choix=='Admin')
+		if($choix=='Admin')
+		{
+				
+			while ($donnees = $monom->fetch())
 			{
-						
-				while ($donnees = $monom->fetch())
+				
+				if($donnees['Adresse_mail']==$adresse_mail)
 				{
-					
 					if($donnees['mdp']==$username)
 					{			
 						header('Location: Admin.php');		
@@ -48,23 +48,28 @@ if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))
 
 						<?php
 						
+						exit;
 					}
-						
+					else
+					{
+						?> <p> mdp incorrecte <p> <?php
+						?><a href="Connexion.php">retourner au menu principale</a><?php
+						exit;
+					}
 				}
-				
-			}
-			else
-			{
-			?> <p> Pas acces <p> <?php
 			}
 		}
-		if(!$monom)
-			echo 'Pas dans la base de donnee';
+		else
+		{
+			?> <p> Pas acces <p> <?php
+		}
+		
 		// On affiche chaque entrée une à une
 		//$reponse->closeCursor(); // Termine le traitement de la requête
-		
 	}
 }
 
-$monom->closeCursor();
+?> <p> adresse mail inexistante chez les administrateurs <p> <?php
+?><a href="Connexion.php">retourner au menu principale</a><?php
+
 ?>
