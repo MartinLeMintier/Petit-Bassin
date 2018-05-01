@@ -31,19 +31,31 @@ if(isset($_GET['name']) AND isset($_GET['Surename']) AND isset($_GET['email']) A
 			die('Erreur : '.$e->getMessage());
 		}
 		
-		if($username==$confirm)
+		$truc = $bdd->prepare('SELECT nom FROM auteur WHERE adresse_mail= ?');
+		$truc->execute(array($adresse_mail));
+		
+		$test = $truc->fetch();
+		
+		if($test == FALSE)
 		{
-			$monom = $bdd->prepare('INSERT INTO auteur(adresse_mail, mdp, prenom, nom) VALUES (:adresse_mail,:mdp,:prenom,:nom)');
-			$monom->execute(array(
-				'adresse_mail' => $adresse_mail,
-				'mdp' => $username,
-				'prenom' => $surename,
-				'nom' => $name,
-				));	
-			//header('Location: Connexion.php');	
+			if($username==$confirm)
+			{
+				$monom = $bdd->prepare('INSERT INTO auteur(adresse_mail, mdp, prenom, nom) VALUES (:adresse_mail,:mdp,:prenom,:nom)');
+				$monom->execute(array(
+					'adresse_mail' => $adresse_mail,
+					'mdp' => $username,
+					'prenom' => $surename,
+					'nom' => $name,
+					));	
+				//header('Location: Connexion.php');	
+			}
+			else
+				echo 'MDP different';
+				header('Location: Connexion.php');
 		}
 		else
-			echo 'MDP different';
+			echo 'mail deja pris';
+			header('Location: Connexion.php');
 	}
 }
 ?>
