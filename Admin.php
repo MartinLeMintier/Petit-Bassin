@@ -1,10 +1,3 @@
-<?php
-
-session_start();
-
-
-?>
-
 <!DOCTYPE html>
 <html>
 <title>PloufBook</title>
@@ -88,17 +81,17 @@ session_start();
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
-										<input type="text" required class="form-control" name="name" id="name"  placeholder="Entrez le nom"  />
+										<input type="text" class="form-control" name="name" id="name"  placeholder="Entrez le nom"  />
 									</div>
 								</div>
 							</div>
 
 							<div class="form-group">
-							<label for="surename" class="cols-sm-2 control-label">Prénom</label>
+							<label for="name" class="cols-sm-2 control-label">Prénom</label>
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
-										<input type="text" required class="form-control" name="surename" id="surename"  placeholder="Entrez le prénom"/>
+										<input type="text" class="form-control" name="name" id="name"  placeholder="Entrez le prénom"/>
 									</div>
 								</div>
 							</div>
@@ -108,7 +101,7 @@ session_start();
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
-										<input type="text" pattern="[a-z0-9._%+-]+@[a-z09.-]+\.[a-z]{2,3}$" required class="form-control" name="email" id="email"  placeholder="Entrez l'Email"/>
+										<input type="text" pattern="[a-z0-9._%+-]+@[a-z09.-] +\.[a-z]{2,3}$" required class="form-control" name="email" id="email"  placeholder="Entrez l'Email"/>
 									</div>
 								</div>
 							</div>
@@ -118,7 +111,7 @@ session_start();
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="glyphicon glyphicon-pencil" aria-hidden="true"></i></span>
-										<input type="text" required class="form-control" name="username" id="username"  placeholder="Entrez le pseudo"/>
+										<input type="text" class="form-control" name="username" id="username"  placeholder="Entrez le pseudo"/>
 									</div>
 								</div>
 							</div>
@@ -129,13 +122,13 @@ session_start();
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="glyphicon glyphicon-pencil" aria-hidden="true"></i></span>
-										<input type="text" required class="form-control" name="confirm" id="confirm"  placeholder="Confirmer le pseudo"/>
+										<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirmer le pseudo"/>
 									</div>
 								</div>
 							</div>
 
 							<div class="form-group ">
-								<button type="submit" class="btn btn-primary btn-lg btn-block login-button">S'inscire</button>
+								<button" type="button" class="btn btn-primary btn-lg btn-block login-button">S'inscire</button>
 							</div>
 
 						</form>
@@ -165,7 +158,7 @@ session_start();
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i></span>
-										<input type="text" required class="form-control" name="email" id="email"  placeholder="Entrez l'Email"/>
+										<input type="text" class="form-control" name="email" id="email"  placeholder="Entrez l'Email"/>
 									</div>
 								</div>
 							</div>
@@ -184,12 +177,5 @@ session_start();
 
 
 </div>
-
-
-
-
-	<p> <?php echo $_SESSION['Email']; ?> </p>
-
-</body>
 
 </html>

@@ -1,11 +1,13 @@
 <?php
 
+
 session_start();
 
 if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))	
 {
 	if(empty($_GET['username']) OR empty($_GET['email']) OR empty($_GET['choix']))
 	{
+		header('Location: Connexion.php');
 		?> <p> Erreur un champ est vide! <p> <?php
 		?><a href="Connexion.php">retourner au menu principale</a><?php
 		exit;
@@ -84,6 +86,7 @@ if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))
 				
 				if($donnees1['adresse_mail']==$adresse_mail)
 				{
+
 					if($donnees1['mdp']==$username)
 					{			
 
@@ -110,8 +113,12 @@ $_SESSION['PP']=$truc4;
 						
 
 
-						header('Location: profil.php');
+						
 							
+
+						
+						header('Location: AccueilUtilisateur.php');		
+
 						?>
 							<p>
 							<strong>utilisateur</strong> : <?php echo $donnees1['nom']; ?><br />
