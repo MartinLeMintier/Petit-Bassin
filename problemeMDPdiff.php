@@ -48,64 +48,16 @@
 		</header>
 
 		<div class="container">
-			<div class="row main">
-
-				<div class="col-sm-6">
+			<div class="row main">			
 					<div class="panel-heading">
 						<div class="panel-title text-center">
-							<h3>Connexion</h3>
-
-							<hr />
-						</div>
-					</div> 
-
-					<div class="main-login main-center">
-						<form method="GET" action="traitementdebut.php" class="form-horizontal" method="post" action="#">
-
-							<div class="ui-widget">
-								<label>Type de compte : </label>
-								<select name="choix" id="combobox">
-									<option value="Utilisateur">Utilisateur</option>
-									<option value="Admin">Administrateur</option>
-
-								</select>
+							<div class="alert alert-danger">
+								<strong>Attention!</strong> votre pseudo et la confirmation est différent
 							</div>
-	
-							<div class="form-group">
-								<label for="email" class="cols-sm-2 control-label">Email</label>
-								<div class="cols-sm-10">
-									<div class="input-group">
-										<span class="input-group-addon"><i class="fa fa-at" aria-hidden="true"></i></span>
-										<input type="text" required class="form-control" name="email" id="email"  placeholder="Entrez votre Email"/>
-									</div>
-								</div>
-							</div>
-	
-							<div class="form-group">
-								<label for="username" class="cols-sm-2 control-label">Pseudo</label>
-								<div class="cols-sm-10">
-									<div class="input-group">
-										<span class="input-group-addon"><i class="fa fa-male" aria-hidden="true"></i></span>
-										<input type="text" required class="form-control" name="username" id="username"  placeholder="Entrez votre pseudo"/>
-									</div>
-								</div>
-							</div>
-
-
 							<div class="form-group ">
-								<button type="submit" class="btn btn-primary btn-lg btn-block login-button">Se connecter</button>
+								<a href="Connexion.php"><button type="submit" class="btn btn-primary btn-lg btn-block login-button">Retour inscription/connexion</button></a>
 							</div>
-
-						</form>
-					</div>
-				</div>
-
-
-				<div class="col-sm-6">
-					<div class="panel-heading">
-						<div class="panel-title text-center">
-							<h3>Pas encore inscrit?</h3>
-
+	               		<hr />
 							<hr />
 						</div>
 					</div> 
@@ -171,7 +123,7 @@
 						</form>
 					</div>
 
-				</div>
+				
 			</div>
 		</div>
 
