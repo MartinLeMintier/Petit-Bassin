@@ -48,6 +48,9 @@
 	                 <div class="alert alert-danger">
 						  <strong>Attention!</strong> Probleme de mot de passe
 						</div>
+						<div class="form-group ">
+								<a href="Connexion.php"><button type="submit" class="btn btn-primary btn-lg btn-block login-button">Retour inscription</button></a>
+							</div>
 	               		<hr />
 	               	</div>
 	            </div> 
