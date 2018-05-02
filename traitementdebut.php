@@ -75,7 +75,7 @@ if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))
 				{
 					if($donnees1['mdp']==$username)	
 					{			
-						//header('Location: Admin.php');		
+						header('Location: AccueilUtilisateur.php');		
 						?>
 							<p>
 							<strong>utilisateur</strong> : <?php echo $donnees1['nom']; ?><br />
