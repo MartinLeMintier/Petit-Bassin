@@ -76,17 +76,17 @@
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-at" aria-hidden="true"></i></span>
-										<input type="text" required class="form-control" name="email" id="email"  placeholder="Entrez votre Email"/>
+										<input type="text" class="form-control" name="email" id="email"  placeholder="Entrez votre Email"/>
 									</div>
 								</div>
 							</div>
-	
+
 							<div class="form-group">
 								<label for="username" class="cols-sm-2 control-label">Pseudo</label>
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-male" aria-hidden="true"></i></span>
-										<input type="text" required class="form-control" name="username" id="username"  placeholder="Entrez votre pseudo"/>
+										<input type="text" class="form-control" name="username" id="username"  placeholder="Entrez votre pseudo"/>
 									</div>
 								</div>
 							</div>
@@ -118,7 +118,7 @@
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-										<input type="text" required class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+										<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
 									</div>
 								</div>
 							</div>
@@ -128,9 +128,7 @@
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-
-										<input type="text" required class="form-control" name="Surename" id="Surename"  placeholder="Enter your Name"/>
-
+										<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
 									</div>
 								</div>
 							</div>
@@ -140,7 +138,7 @@
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-at" aria-hidden="true"></i></span>
-										<input type="text" required class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+										<input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
 									</div>
 								</div>
 							</div>
@@ -150,7 +148,7 @@
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-male" aria-hidden="true"></i></span>
-										<input type="text" required class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+										<input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
 									</div>
 								</div>
 							</div>
@@ -161,9 +159,7 @@
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-male" aria-hidden="true"></i></span>
-
-										<input type="text" required class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
-
+										<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
 									</div>
 								</div>
 							</div>
