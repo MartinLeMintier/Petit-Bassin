@@ -1,5 +1,8 @@
 <?php
 
+
+session_start();
+
 if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))	
 {
 	if(empty($_GET['username']) OR empty($_GET['email']) OR empty($_GET['choix']))
@@ -14,6 +17,8 @@ if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))
 		$username = $_GET['username'];
 		$adresse_mail = $_GET['email'];
 		$choix = $_GET['choix'];
+
+
 		
 		try
 		{
@@ -41,7 +46,15 @@ if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))
 				if($donnees['Adresse_mail']==$adresse_mail)
 				{
 					if($donnees['mdp']==$username)
-					{			
+					{	
+
+
+						
+
+
+
+
+
 						header('Location: Admin.php');		
 						?>
 							<p>
@@ -73,9 +86,39 @@ if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))
 				
 				if($donnees1['adresse_mail']==$adresse_mail)
 				{
-					if($donnees1['mdp']==$username)	
+
+					if($donnees1['mdp']==$username)
 					{			
+
+						$_SESSION['email']=$adresse_mail;
+
+						$truc = $bdd->prepare('SELECT * FROM auteur WHERE adresse_mail=?');
+						$truc->execute(array($adresse_mail));
+
+						$newdonnees = $truc->fetch();
+						$truc = $newdonnees['nom'];
+						$truc1 = $newdonnees['prenom'];
+						
+						$truc2 = $newdonnees['mdp'];
+						$truc3 = $newdonnees['ID'];
+						$truc4 = $newdonnees['photodepp'];
+						
+$_SESSION['PP']=$truc4;
+						$_SESSION['nom']=$truc;
+						
+						$_SESSION['mdp']=$truc2;
+						$_SESSION['prenom']=$truc1;
+						$_SESSION['ID']=$truc3;
+						
+						
+
+
+						
+							
+
+						
 						header('Location: AccueilUtilisateur.php');		
+
 						?>
 							<p>
 							<strong>utilisateur</strong> : <?php echo $donnees1['nom']; ?><br />

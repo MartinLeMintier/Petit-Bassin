@@ -12,6 +12,8 @@ session_start();
 	<title>Page Profil</title>
 </head>
 
+	<!-- Tout des details de la bare bleu en haut de la page -->
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,7 +21,9 @@ session_start();
 <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" href="ProfilDesign.css" />
+<link rel="stylesheet" href="ProfilDesign.css?refresh=0" />
+
+
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -35,7 +39,7 @@ session_start();
 </script>
 
 
-<body>
+<body class ="boudy">
 
 
 	<!-- Navbar -->
@@ -45,29 +49,37 @@ session_start();
 				<img src="images/logonew.png" class="logo" alt="" />
 				<a class="navbar-brand" href="#">PloufBook</a>
 			</div>
+
+			<!-- Icone pour la deconnexion -->
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="Connexion.php"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>
+					<li><a href="Connexion.php"><span class="glyphicon glyphicon-off"></span> Déconnexion</a></li>
+
+				</ul>
+			<!-- Icone pour la Notification -->
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="Connexion.php"><span class="glyphicon glyphicon-bell"></span> Notifications</a></li>
+
+				</ul>
+			<!-- Icone pour la messagerie -->
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="Connexion.php"><span class="	glyphicon glyphicon-envelope"></span> Messagerie</a></li>
+
+				</ul>
+			<!-- Icone pour la Mon reseau -->
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="Connexion.php"><span class="glyphicon glyphicon-link"></span> Mon Réseau</a></li>
 
 				</ul>
 
+				<!-- Icone pour la Mon Profil -->
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="Connexion.php"><span class="glyphicon glyphicon-log-out"></span> Notifications</a></li>
+					<li><a href="Connexion.php"><span class="glyphicon glyphicon-user"></span> Vous</a></li>
 
 				</ul>
-
+			<!-- Icone pour la acceuil -->
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="Connexion.php"><span class="glyphicon glyphicon-log-out"></span> Messagerie</a></li>
-
-				</ul>
-
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="Connexion.php"><span class="glyphicon glyphicon-log-out"></span> Mon Réseau</a></li>
-
-				</ul>
-
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="Connexion.php"><span class="glyphicon glyphicon-log-out"></span> Acceuil</a></li>
+					<li><a href="Connexion.html"><span class="glyphicon glyphicon-home"></span> Acceuil</a></li>
 
 				</ul>
 
@@ -93,17 +105,30 @@ session_start();
 
 	<div>
 		
-		<img   src = "images/PP.jpg" class = "img-responsive PP" alt = "PP"/>
+		<!-- On affcihe l'image du profil dans la base de données -->
+		<?php $t = $_SESSION['PP']; 
+
+		echo '<img class="pp" src="images/' . $t . '">'; 
+		?>
+
+
+		<a href="upload.html"><button type ='submit'  class ="btn btn-primary bouton"  >Changer photo</button>
+
 
 	</div>
 
 
 
-	<p> <?php echo $_SESSION['nom']; ?> </p>
-	<p> <?php echo $_SESSION['prenom']; ?> </p>
+
+	<!-- On affiche le nom de l'utilisateur -->
+	<h1 class="test"><?php echo $_SESSION['prenom']; echo " "; echo $_SESSION['nom']; ?></h1> 
+	
+
+<!-- On en a pas besoin de ca 
 	<p> <?php echo $_SESSION['mdp']; ?> </p>
 	<p> <?php echo $_SESSION['ID']; ?> </p>
 	<p> <?php echo $_SESSION['email']; ?> </p>
+	<p> <?php echo $_SESSION['PP']; ?> </p>   -->
 
 
 
