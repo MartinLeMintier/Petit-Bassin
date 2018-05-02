@@ -49,7 +49,7 @@
   <div class="row">
     <div class="col-sm-3 well">
       <div class="well">
-        <p><a href="#">Mon Profil</a></p>
+        <p><a href="Profil.php">Mon Profil</a></p>
         <img src="images/Utilisateur.png" class="img-circle" height="65" width="65" alt="Avatar">
       </div>
       <div class="well">

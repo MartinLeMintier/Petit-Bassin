@@ -17,9 +17,9 @@ if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))
 		$username = $_GET['username'];
 		$adresse_mail = $_GET['email'];
 		$choix = $_GET['choix'];
+	
 
-
-		
+	
 		try
 		{
 			// On se connecte à MySQL
@@ -54,7 +54,7 @@ if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))
 
 
 
-
+			
 						header('Location: Admin.php');		
 						?>
 							<p>
@@ -86,7 +86,7 @@ if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))
 				
 				if($donnees1['adresse_mail']==$adresse_mail)
 				{
-
+					
 					if($donnees1['mdp']==$username)
 					{			
 

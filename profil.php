@@ -79,7 +79,7 @@ session_start();
 				</ul>
 			<!-- Icone pour la acceuil -->
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="Connexion.html"><span class="glyphicon glyphicon-home"></span> Acceuil</a></li>
+					<li><a href="Connexion.php"><span class="glyphicon glyphicon-home"></span> Acceuil</a></li>
 
 				</ul>
 

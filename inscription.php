@@ -11,7 +11,7 @@ if(isset($_GET['name']) AND isset($_GET['Surename']) AND isset($_GET['email']) A
 	else
 	{	
 		$name = $_GET['name'];
-		$surename = $_GET['surename'];
+		$surename = $_GET['Surename'];
 		$adresse_mail = $_GET['email'];
 		$username = $_GET['username'];
 		$confirm = $_GET['confirm'];
@@ -47,7 +47,7 @@ if(isset($_GET['name']) AND isset($_GET['Surename']) AND isset($_GET['email']) A
 					'prenom' => $surename,
 					'nom' => $name,
 					));	
-				header('Location: Connexion.php');	
+				header('Location: success2.php');	
 			}
 			else
 			{
