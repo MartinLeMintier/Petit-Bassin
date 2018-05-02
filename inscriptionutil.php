@@ -1,8 +1,8 @@
 <?php
 
-if(isset($_GET['name']) AND isset($_GET['Surename']) AND isset($_GET['email']) AND isset($_GET['username']) AND isset($_GET['confirm']))	
+if(isset($_GET['name']) AND isset($_GET['surename']) AND isset($_GET['email']) AND isset($_GET['username']) AND isset($_GET['confirm']))	
 {
-	if(empty($_GET['username']) OR empty($_GET['email']) OR empty($_GET['name']) OR empty($_GET['Surename']) OR empty($_GET['confirm']))
+	if(empty($_GET['username']) OR empty($_GET['email']) OR empty($_GET['name']) OR empty($_GET['surename']) OR empty($_GET['confirm']))
 	{
 		?> <p> Erreur un champ est vide! <p> <?php
 		?><a href="Connexion.php">retourner au menu principale</a><?php
@@ -47,17 +47,17 @@ if(isset($_GET['name']) AND isset($_GET['Surename']) AND isset($_GET['email']) A
 					'prenom' => $surename,
 					'nom' => $name,
 					));	
-				header('Location: Connexion.php');	
+				header('Location: success.php');	
 			}
 			else
 			{
-				header('Location: problemeMDPdiff.php');
+				header('Location: problemeMDPdiffAdmin.php');
 				exit;
 			}
 		}
 		else
 		{
-			header('Location: problemeemaildejala.php');
+			header('Location: Admin.php');
 		}
 	}
 }

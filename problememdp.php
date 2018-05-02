@@ -48,6 +48,9 @@
 	                 <div class="alert alert-danger">
 						  <strong>Attention!</strong> Probleme de mot de passe
 						</div>
+						<div class="form-group ">
+								<a href="Connexion.php"><button type="submit" class="btn btn-primary btn-lg btn-block login-button">Retour inscription</button></a>
+							</div>
 	               		<hr />
 	               	</div>
 	            </div> 
@@ -70,7 +73,7 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-at" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="email" id="email"  placeholder="Entrez votre Email"/>
+									<input type="text" required class="form-control" name="email" id="email"  placeholder="Entrez votre Email"/>
 								</div>
 							</div>
 						</div>
@@ -80,7 +83,7 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-male" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="username" id="username"  placeholder="Entrez votre pseudo"/>
+									<input type="text" required class="form-control" name="username" id="username"  placeholder="Entrez votre pseudo"/>
 								</div>
 							</div>
 						</div>
