@@ -34,10 +34,10 @@
 <body>
 	<!-- Header with image -->
 	<header class="header_accueil">
-
 		<div id="titre_site">
 
 			<h1>PloufBook</h1> </div>
+
 
 			<div class="col-sm-12">
 
@@ -46,6 +46,7 @@
 
 
 		</header>
+
 		<div class="container">
 			<div class="row main">
 
@@ -64,13 +65,12 @@
 							<div class="ui-widget">
 								<label>Type de compte : </label>
 								<select name="choix" id="combobox">
-									<option value="" disabled selected>Choisir le compte</option>
 									<option value="Utilisateur">Utilisateur</option>
 									<option value="Admin">Administrateur</option>
 
 								</select>
 							</div>
-
+	
 							<div class="form-group">
 								<label for="email" class="cols-sm-2 control-label">Email</label>
 								<div class="cols-sm-10">
@@ -111,7 +111,7 @@
 					</div> 
 
 					<div class="main-login main-center">
-						<form class="form-horizontal" method="post" action="#">
+						<form method="GET" action="inscription.php" class="form-horizontal" method="post" action="#">
 
 							<div class="form-group">
 							<label for="name" class="cols-sm-2 control-label">Nom</label>
@@ -124,13 +124,11 @@
 							</div>
 
 							<div class="form-group">
-							<label for="name" class="cols-sm-2 control-label">Prénom</label>
+							<label for="Surename" class="cols-sm-2 control-label">Prénom</label>
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-
 										<input type="text" required class="form-control" name="Surename" id="Surename"  placeholder="Enter your Name"/>
-
 									</div>
 								</div>
 							</div>
@@ -161,15 +159,13 @@
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-male" aria-hidden="true"></i></span>
-
 										<input type="text" required class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>
-
 									</div>
 								</div>
 							</div>
 
 							<div class="form-group ">
-								<button type="button" class="btn btn-primary btn-lg btn-block login-button">S'inscire</button>
+								<button type="submit" class="btn btn-primary btn-lg btn-block login-button">S'inscire</button>
 							</div>
 
 						</form>
