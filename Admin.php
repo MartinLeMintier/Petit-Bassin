@@ -1,10 +1,3 @@
-<?php
-
-session_start();
-
-
-?>
-
 <!DOCTYPE html>
 <html>
 <title>PloufBook</title>
@@ -38,25 +31,10 @@ session_start();
 			<div class="navbar-header">
 				<img src="images/logonew.png" class="logo" alt="" />
 				<a class="navbar-brand" href="#">PloufBook</a>
-	
 			</div>
-
-
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
-				    <li><div class="col-md-4 col-md-offset-3">
-            <form action="" class="search-form">
-                <div class="form-group has-feedback">
-            		<label for="search" class="sr-only">Recherche</label>
-            		<input type="text" class="form-control" name="search" id="search" placeholder="Rechercher...">
-              		<span class="glyphicon glyphicon-search form-control-feedback"></span>
-            	</div>	
-            </form>
-        </div></li>
-      
-    
-
-					<li><a href="deconnexion.php"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>
 
 				</ul>
 			</div>
@@ -186,9 +164,6 @@ session_start();
 </div>
 
 
-
-
-	<p> <?php echo $_SESSION['Email']; ?> </p>
 
 </body>
 

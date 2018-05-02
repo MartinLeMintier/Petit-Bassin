@@ -1,5 +1,5 @@
 .container-fluid{
-    background-color: #4F8BB0;
+	background-color: #4F8BB0;
 }
 .navbarli a, .navbar .navbar-brand {
     color: white !important;
@@ -16,7 +16,7 @@
 }
 
 nav a:visited,.navbar-nav{
-    color: white;
+	color: red;
 }
 
 .navbar-inverse  {
@@ -24,10 +24,10 @@ nav a:visited,.navbar-nav{
     color: red !important;
 }
 .logo{
-    float: left;
+	float: left;
     width: 50px;
-    
-    
+	
+	
 }
 
 header h1{
@@ -57,7 +57,7 @@ header h1{
 
 
 .main{
-    margin-top: 70px;
+ 	margin-top: 70px;
 }
 
 .panel-title{
@@ -76,23 +76,23 @@ h3{
 }
 
 h1.title { 
-    font-size: 50px;
-    font-family: 'Passion One', cursive; 
-    font-weight: 400; 
+	font-size: 50px;
+	font-family: 'Passion One', cursive; 
+	font-weight: 400; 
 }
 
 hr{
-    width: 10%;
-    color: #fff;
+	width: 10%;
+	color: #fff;
 }
 
 .form-group{
-    margin-bottom: 15px;
+	margin-bottom: 15px;
 
 }
 
 label{
-    margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 input,
@@ -104,7 +104,7 @@ input::-webkit-input-placeholder {
 
 
 .main-login{
-    background-color: #fff;
+ 	background-color: #fff;
     /* shadows and rounded borders */
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
@@ -117,9 +117,9 @@ input::-webkit-input-placeholder {
 }
 
 .main-center{
-    margin-top: 30px;
-    margin: 0 auto;
-    max-width: 900px;
+ 	margin-top: 30px;
+ 	margin: 0 auto;
+ 	max-width: 900px;
     padding: 40px 40px;
 
 
@@ -129,55 +129,4 @@ input::-webkit-input-placeholder {
 h2{
     color:white !important;
     font-family: 'Avantgarde', 'TeX Gyre Adventor', 'URW Gothic L', sans-serif!important; 
-}
-
-.search-form .form-group {
-  
-  
-  width: 150px;
-  display:block;
-  margin-left: -130px;
-  margin-right:auto;
-  top: 10px;
-  height: 32px;
-  background-color: #fff;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-  border-radius: 25px;
-  border: 1px solid #ccc;
-}
-
-.search-form .form-group input.form-control {
-  padding-right: 20px;
-  border: 0 none;
-  background: transparent;
-  box-shadow: none;
-  display:block;
-}
-.search-form .form-group input.form-control::-webkit-input-placeholder {
-  display: none;
-}
-.search-form .form-group input.form-control:-moz-placeholder {
-  /* Firefox 18- */
-  display: none;
-}
-.search-form .form-group input.form-control::-moz-placeholder {
-  /* Firefox 19+ */
-  display: none;
-}
-.search-form .form-group input.form-control:-ms-input-placeholder {
-  display: none;
-}
-.search-form .form-group span.form-control-feedback {
-  
-  
-  right: -2px;
-  z-index: 2;
-  display: block;
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
-  text-align: center;
-  color: #3596e0;
-  
-  font-size: 14px;
 }
