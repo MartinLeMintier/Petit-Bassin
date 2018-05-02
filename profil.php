@@ -21,7 +21,9 @@ session_start();
 <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" href="ProfilDesign.css" />
+<link rel="stylesheet" href="ProfilDesign.css?refresh=0" />
+
+
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -77,7 +79,7 @@ session_start();
 				</ul>
 			<!-- Icone pour la acceuil -->
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="upload.html"><span class="glyphicon glyphicon-home"></span> Acceuil</a></li>
+					<li><a href="Connexion.html"><span class="glyphicon glyphicon-home"></span> Acceuil</a></li>
 
 				</ul>
 
@@ -105,9 +107,12 @@ session_start();
 		
 		<!-- On affcihe l'image du profil dans la base de données -->
 		<?php $t = $_SESSION['PP']; 
+
 		echo '<img class="pp" src="images/' . $t . '">'; 
 		?>
 
+
+		<a href="upload.html"><button type ='submit'  class ="btn btn-primary bouton"  >Changer photo</button>
 
 
 	</div>

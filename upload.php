@@ -1,4 +1,8 @@
 <?php
+
+session_start();
+
+
 $dossier = 'images/';
 $fichier = basename($_FILES['avatar']['name']);
 $taille_maxi = 100000;
@@ -17,15 +21,41 @@ if($taille>$taille_maxi)
 if(!isset($erreur)) //S'il n'y a pas d'erreur, on upload
 {
      //On formate le nom du fichier ici...
-     $fichier = strtr($fichier, 
-          'ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ', 
-          'AAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy');
-     $fichier = preg_replace('/([^.a-z0-9]+)/i', '-', $fichier);
+
+     //$fichier ='pp.jpg';
+
+
+
+//$fichier = strtr($fichier, 
+      //   'ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ', 
+        //'AAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy');
+     //$fichier = preg_replace('/([^.a-z0-9]+)/i', '-', $fichier);
+
+
      if(move_uploaded_file($_FILES['avatar']['tmp_name'], $dossier . $fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
      {
           echo 'Upload ok !';
 
-          header('Location: Connexion.php');
+               try
+     {
+          $bdd = new PDO('mysql:host=localhost;dbname=petit_bateau;charset=utf8', 'root', '');
+          $truc = $bdd->prepare('UPDATE auteur SET photodepp = ? WHERE adresse_mail = ?');
+          $truc->execute(array($fichier, $_SESSION['email']));
+
+
+          $_SESSION['PP']=$fichier;
+
+
+
+     }
+               catch(Exception $e)
+          {
+               // En cas d'erreur, on affiche un message et on arrête tout
+               die('Erreur : '.$e->getMessage());
+          }
+
+
+          header('Location: profil.php');
      }
      else //Sinon (la fonction renvoie FALSE).
      {
