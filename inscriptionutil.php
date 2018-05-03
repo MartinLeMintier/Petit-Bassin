@@ -57,7 +57,7 @@ if(isset($_GET['name']) AND isset($_GET['surename']) AND isset($_GET['email']) A
 		}
 		else
 		{
-			header('Location: Admin.php');
+			header('Location: problemeemaildejalaadmin.php');
 		}
 	}
 }
