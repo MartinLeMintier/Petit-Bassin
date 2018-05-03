@@ -68,7 +68,7 @@ session_start();
 				</ul>
 			<!-- Icone pour la Mon reseau -->
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="Connexion.php"><span class="glyphicon glyphicon-link"></span> Mon Réseau</a></li>
+					<li><a href="reseau.php"><span class="glyphicon glyphicon-link"></span> Mon Réseau</a></li>
 
 				</ul>
 
@@ -79,7 +79,7 @@ session_start();
 				</ul>
 			<!-- Icone pour la acceuil -->
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="Connexion.php"><span class="glyphicon glyphicon-home"></span> Acceuil</a></li>
+					<li><a href="AccueilUtilisateur.php"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
 
 				</ul>
 

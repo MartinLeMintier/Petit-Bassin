@@ -61,7 +61,6 @@
 								<div class="ui-widget">
 								<label>Type de compte : </label>
 								<select name="choix" id="combobox">
-									<option value="" disabled selected>Choisir le compte</option>
 									<option value="Utilisateur">Utilisateur</option>
 									<option value="Admin">Administrateur</option>
 								   
