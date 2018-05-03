@@ -147,22 +147,7 @@ session_start();
       </div>
       
       
-    </div>
-    <div class="col-sm-7 ">
     
-
-      
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-           <p><?php echo $_SESSION['prenom'];?><br />
-           	<?php echo $_SESSION['nom'];?><br />
-           </p>
-           
-          </div>
-        </div>
-        <div class="col-sm-9">
-         <div class="well">
 
 
           		<?php  
@@ -175,15 +160,186 @@ session_start();
 							//$publications = $bdd->prepare('SELECT IDpub FROM publie WHERE IDutilisateur = ?');
 							$publications = $bdd->prepare('SELECT Texte FROM publication WHERE publication.IDPub IN (SELECT IDpub FROM publie WHERE IDutilisateur = ?)');
 							$publications->execute(array($_SESSION['ID']));
-							while($lire = $publications->fetch())
-							{
+
+
+							?>
+
+							</div>
+						    <div class="col-sm-7 ">
+						    
+
+						      
+						      <div class="row">
+						        <div class="col-sm-3">
+						          <div class="well">
+						           <p><?php echo $_SESSION['prenom'];?><br />
+						           	<?php echo $_SESSION['nom'];?><br />
+						           </p>
+						           
+						          </div>
+						        </div>
+						        <div class="col-sm-9">
+						         <div class="well">
+
+						         	<?php
+
+
+							/*while(*/$lire = $publications->fetch();//)
+							//{
 								echo $lire[0];
-								$publicationn = $lire[0];
 
-							}
+							//}
+
+								?>
+					            <div class="panel-body">
+					          </div>
+
+					          </div>
+					        </div>
+					      </div>
+
+					      <?php
+
+						?>
+
+						<div class="row">		
+				        <div class="col-sm-3">
+				          <div class="well">
+				           <p><?php echo $_SESSION['prenom'];?><br />
+				           	<?php echo $_SESSION['nom'];?><br />
+				           </p>
+				 
+				          </div>
+				        </div>
+				        <div class="col-sm-9">
+				          <div class="well">
+
+
+						         	<?php
+
+
+							/*while(*/$lire = $publications->fetch();//)
+							//{
+								echo $lire[0];
+
+							//}
+
+								?>
+				          </div>
+				        </div>
+				      </div>
+
+				      <div class="row">		
+				        <div class="col-sm-3">
+				          <div class="well">
+				           <p><?php echo $_SESSION['prenom'];?><br />
+				           	<?php echo $_SESSION['nom'];?><br />
+				           </p>
+				 
+				          </div>
+				        </div>
+				        <div class="col-sm-9">
+				          <div class="well">
+
+
+						         	<?php
+
+
+							/*while(*/$lire = $publications->fetch();//)
+							//{
+								echo $lire[0];
+
+							//}
+
+								?>
+				          </div>
+				        </div>
+				      </div>
+
+				      <div class="row">		
+				        <div class="col-sm-3">
+				          <div class="well">
+				           <p><?php echo $_SESSION['prenom'];?><br />
+				           	<?php echo $_SESSION['nom'];?><br />
+				           </p>
+				 
+				          </div>
+				        </div>
+				        <div class="col-sm-9">
+				          <div class="well">
+
+
+						         	<?php
+
+
+							/*while(*/$lire = $publications->fetch();//)
+							//{
+								echo $lire[0];
+
+							//}
+
+								?>
+				          </div>
+				        </div>
+				      </div>
+
+				      <div class="row">		
+				        <div class="col-sm-3">
+				          <div class="well">
+				           <p><?php echo $_SESSION['prenom'];?><br />
+				           	<?php echo $_SESSION['nom'];?><br />
+				           </p>
+				 
+				          </div>
+				        </div>
+				        <div class="col-sm-9">
+				          <div class="well">
+
+
+						         	<?php
+
+
+							/*while(*/$lire = $publications->fetch();//)
+							//{
+								echo $lire[0];
+
+							//}
+
+								?>
+				          </div>
+				        </div>
+				      </div>
+
+				      <div class="row">		
+				        <div class="col-sm-3">
+				          <div class="well">
+				           <p><?php echo $_SESSION['prenom'];?><br />
+				           	<?php echo $_SESSION['nom'];?><br />
+				           </p>
+				 
+				          </div>
+				        </div>
+				        <div class="col-sm-9">
+				          <div class="well">
+
+
+						         	<?php
+
+
+							/*while(*/$lire = $publications->fetch();//)
+							//{
+								echo $lire[0];
+
+							//}
+
+								?>
+				          </div>
+				        </div>
+				      </div>
 
 
 
+				      		<?php
 							$bdd = null;
 						}
 						catch(Exception $e)
@@ -192,66 +348,8 @@ session_start();
 							die('Erreur : '.$e->getMessage());
 						}     
 
-
-
-					
-     			
-
           		?>
-
-            <div class="panel-body">
-          </div>
-
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-           <p><?php echo $_SESSION['prenom'];?><br />
-           	<?php echo $_SESSION['nom'];?><br />
-           </p>
- 
-          </div>
-        </div>
-        <div class="col-sm-9">
-          <div class="well">
-            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-           <p><?php echo $_SESSION['prenom'];?><br />
-           	<?php echo $_SESSION['nom'];?><br />
-           </p>
-
-          </div>
-        </div>
-        <div class="col-sm-9">
-          <div class="well">
-            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-           <p><?php echo $_SESSION['prenom'];?><br />
-           	<?php echo $_SESSION['nom'];?><br />
-           </p>
-
-          </div>
-        </div>
-        <div class="col-sm-9">
-          <div class="well">
-            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-          </div>
-        </div>
-      </div>     
+    
     </div>
     
     <div class="col-sm-2 well">
