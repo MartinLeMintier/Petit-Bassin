@@ -28,16 +28,15 @@ if(isset($_GET['email']))
 			die('Erreur : '.$e->getMessage());
 		}
 
-			$monom = $bdd->prepare('SELECT * FROM administrateur');
-			$monom->execute(array($adresse_mail, $username));
+			$monom = $bdd->prepare('SELECT * FROM auteur');
+			$monom->execute(array($adresse_mail));
 				
 			while ($donnees = $monom->fetch())
 			{
-				
-				if($donnees['Adresse_mail']==$adresse_mail)
-				{
-					$monom = $bdd->prepare('DELETE * FROM auteur WHERE adresse_mail= ?');
-					$monom->execute(array('adresse_mail'));	
+				if($donnees['adresse_mail']==$adresse_mail)
+				{ 
+					$monom = $bdd->prepare('DELETE FROM auteur WHERE adresse_mail= ?');
+					$monom->execute(array($adresse_mail));	
 					header('Location: Admin.php');					
 					exit;
 				}
