@@ -45,7 +45,7 @@ if(isset($_GET['email']))
 		//$reponse->closeCursor(); // Termine le traitement de la requête
 	}
 }
-header('Location: problemeemail.php');
+header('Location: problememdpsuoo.php');
 ?> <p> adresse mail inexistante<p> <?php
 ?><a href="Connexion.php">retourner au menu principale</a><?php
 
