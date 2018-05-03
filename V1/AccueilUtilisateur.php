@@ -97,7 +97,6 @@
           </div>
         </div>
       </div>
-
       <div class="row">
         <div class="col-sm-3">
           <div class="well">
@@ -124,7 +123,6 @@
           </div>
         </div>
       </div>
-
       <div class="row">
         <div class="col-sm-3">
           <div class="well">
@@ -139,7 +137,6 @@
         </div>
       </div>     
     </div>
-    
     <div class="col-sm-2 well">
       <div class="thumbnail">
         <p>Mes Connaissances</p>

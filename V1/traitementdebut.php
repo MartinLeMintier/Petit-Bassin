@@ -102,16 +102,21 @@ if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))
 						$truc2 = $newdonnees['mdp'];
 						$truc3 = $newdonnees['ID'];
 						$truc4 = $newdonnees['photodepp'];
-
-						$_SESSION['PP']=$truc4;
+						
+$_SESSION['PP']=$truc4;
 						$_SESSION['nom']=$truc;
 						
 						$_SESSION['mdp']=$truc2;
 						$_SESSION['prenom']=$truc1;
 						$_SESSION['ID']=$truc3;
-
+						
 						
 
+
+						
+							
+
+						
 						header('Location: AccueilUtilisateur.php');		
 
 						?>

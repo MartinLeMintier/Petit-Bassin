@@ -40,12 +40,14 @@ if(isset($_GET['name']) AND isset($_GET['Surename']) AND isset($_GET['email']) A
 		{
 			if($username==$confirm)
 			{
-				$monom = $bdd->prepare('INSERT INTO auteur(adresse_mail, mdp, prenom, nom) VALUES (:adresse_mail,:mdp,:prenom,:nom)');
+				$monom = $bdd->prepare('INSERT INTO auteur(adresse_mail, mdp, prenom, nom, ID, photodepp) VALUES (:adresse_mail,:mdp,:prenom,:nom, :ID, :photodepp)');
 				$monom->execute(array(
 					'adresse_mail' => $adresse_mail,
 					'mdp' => $username,
 					'prenom' => $surename,
 					'nom' => $name,
+					'ID' => 4,
+					'photodepp' => photodepp.jpg,
 					));	
 				header('Location: success2.php');	
 			}

@@ -1,0 +1,83 @@
+.container-fluid{
+    background-color: #4F8BB0;
+
+}
+.navbarli a, .navbar .navbar-brand {
+    color: white !important;
+}
+
+
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: black !important;
+    background-color: #fff !important;
+}
+.collapse ul li a {
+    color: white;
+}
+
+nav a:visited,.navbar-nav{
+    color: white;
+}
+
+.navbar-inverse  {
+    border-color: transparent;
+    color: red !important;
+}
+.logo{
+    float: left;
+    width: 50px;
+    
+    
+}
+
+.search-form .form-group {
+  
+  
+  width: 150px;
+  display:block;
+  margin-left: -130px;
+  margin-right:auto;
+  top: 10px;
+  height: 32px;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+}
+
+.search-form .form-group input.form-control {
+  padding-right: 20px;
+  border: 0 none;
+  background: transparent;
+  box-shadow: none;
+  display:block;
+}
+.search-form .form-group input.form-control::-webkit-input-placeholder {
+  display: none;
+}
+.search-form .form-group input.form-control:-moz-placeholder {
+  /* Firefox 18- */
+  display: none;
+}
+.search-form .form-group input.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  display: none;
+}
+.search-form .form-group input.form-control:-ms-input-placeholder {
+  display: none;
+}
+.search-form .form-group span.form-control-feedback {
+  
+  
+  right: -2px;
+  z-index: 2;
+  display: block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  color: #3596e0;
+  
+  font-size: 14px;
+}

@@ -40,23 +40,14 @@ if(isset($_GET['name']) AND isset($_GET['surename']) AND isset($_GET['email']) A
 		{
 			if($username==$confirm)
 			{
-				try{
-				$monom = $bdd->prepare('INSERT INTO auteur(adresse_mail, mdp, prenom, nom, ID, photodepp) VALUES (:adresse_mail,:mdp,:prenom,:nom, :ID, :photodepp)');
+				$monom = $bdd->prepare('INSERT INTO auteur(adresse_mail, mdp, prenom, nom) VALUES (:adresse_mail,:mdp,:prenom,:nom)');
 				$monom->execute(array(
 					'adresse_mail' => $adresse_mail,
 					'mdp' => $username,
 					'prenom' => $surename,
 					'nom' => $name,
-					'ID' => 4,
-					'photodepp' => photodepp.jpg,
 					));	
-				header('Location: success.php');
-				}
-				catch(Exception $e)
-				{
-					// En cas d'erreur, on affiche un message et on arrête tout
-					die('Erreur : '.$e->getMessage());
-				}	
+				header('Location: success.php');	
 			}
 			else
 			{

@@ -108,11 +108,15 @@ session_start();
 		<!-- On affcihe l'image du profil dans la base de données -->
 		<?php $t = $_SESSION['PP']; 
 
+
+
+
+
 		echo '<img class="pp" src="images/' . $t . '">'; 
 		?>
 
 
-		<a href="upload.html"><button type ='submit'  class ="btn btn-primary bouton"  >Changer photo</button>
+		<a href="upload.html"><button type ='submit'  class ="btn btn-primary bouton"  >Changer photo</button></a>
 
 
 	</div>
@@ -129,6 +133,146 @@ session_start();
 	<p> <?php echo $_SESSION['ID']; ?> </p>
 	<p> <?php echo $_SESSION['email']; ?> </p>
 	<p> <?php echo $_SESSION['PP']; ?> </p>   -->
+
+<div class="container text-center">    
+  <div class="row">
+    <div class="col-sm-3">
+      
+      </div>
+      
+      
+    </div>
+    <div class="col-sm-7">
+    
+
+      
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+           <p><?php echo $_SESSION['prenom'];?><br />
+           	<?php echo $_SESSION['nom'];?><br />
+           </p>
+           <img src="bird.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+          		<?php  
+
+
+          				try
+		{
+			// On se connecte à MySQL
+			$bdd2 = new PDO('mysql:host=localhost;dbname=petit_bateau;charset=utf8', 'root', '');
+			//$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			//$monom = $bdd->prepare('SELECT * FROM administrateur');
+			//$monom->execute(array($adresse_mail, $username));
+			
+		}
+		catch(Exception $e)
+		{
+			// En cas d'erreur, on affiche un message et on arrête tout
+			die('Erreur : '.$e->getMessage());
+		}     
+
+
+
+						$marequete = $bdd2->prepare('SELECT * FROM publication WHERE ID=?)');
+          				$marequete->execute(array(2));
+
+          				$mabite = $marequete->fetch();
+          				$truc4012 = $mabite['Lieu'];
+
+          				$_SESSION['Lieu'] = $truc4012;  			
+
+     				?><p>
+     					<?php echo $_SESSION['Lieu'];?><br />
+     				<?php echo $_SESSION['ID'];?><br />
+     				<?php echo $_SESSION['PP'];?><br />
+					<?php echo $_SESSION['nom'];?><br />		
+					<?php echo $_SESSION['mdp'];?><br />
+					<?php echo $_SESSION['Lieu'];?><br />
+					</p><?php
+     			
+
+          		?>
+
+            <div class="panel-body">
+              
+                   
+           
+          </div>
+          <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-thumbs-up"></span> Aimer
+              </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+           <p><?php echo $_SESSION['prenom'];?><br />
+           	<?php echo $_SESSION['nom'];?><br />
+           </p>
+           <img src="bandmember.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+           <p><?php echo $_SESSION['prenom'];?><br />
+           	<?php echo $_SESSION['nom'];?><br />
+           </p>
+           <img src="bandmember.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+           <p><?php echo $_SESSION['prenom'];?><br />
+           	<?php echo $_SESSION['nom'];?><br />
+           </p>
+           <img src="bird.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+          </div>
+        </div>
+      </div>     
+    </div>
+    
+    <div class="col-sm-2 well">
+      <div class="thumbnail">
+        <p>Mes Connaissances</p>
+        <img src="images/réseau.jpg" alt="Paris" width="400" height="300">
+        <br>
+        <br>
+        <button class="btn btn-primary">Amis</button>
+        <br>
+        <br>
+        <button class="btn btn-primary">Réseau</button>
+      </div>      
+    
+    </div>
+  </div>
+</div>
+
 
 
 

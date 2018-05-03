@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 03 Mai 2018 à 14:18
+-- Généré le :  Mar 01 Mai 2018 à 16:33
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -91,9 +91,8 @@ CREATE TABLE IF NOT EXISTS `auteur` (
 
 INSERT INTO `auteur` (`adresse_mail`, `mdp`, `prenom`, `nom`, `photodepp`, `photodecouv`, `ID`) VALUES
 ('adresse', 'mdp', 'pre', 'nom', 'photo', 'photo', 0),
-('mail1@edu.ece.fr', 'mdp1', 'Marie', 'Yayawi', 'ckjzdlak.jpeg', '', 1),
-('mail2@edu.ece.fr', 'mdp2', 'amandine', 'duc', 'logonew.png', '', 2),
-('quentin.are@live.fr', 'quentinare', 'Quentinq', 'quentin', '6040254.jpg', '', 4);
+('mail1@edu.ece.fr', 'mdp1', 'marie', 'yayawi', '', '', 1),
+('mail2@edu.ece.fr', 'mdp2', 'amandine', 'duc', '', '', 2);
 
 -- --------------------------------------------------------
 
@@ -236,8 +235,7 @@ CREATE TABLE IF NOT EXISTS `publication` (
 
 INSERT INTO `publication` (`IDPub`, `Texte`, `Lieu`, `Date`, `NbLikes`, `humeur`, `Emploi`) VALUES
 (1, 'Le web c''est vraiment trop genial !', 'Paris', '2018-05-15', 2, 'Colère', 'Non'),
-(2, 'Qui veut manger avec moi ?', 'PAris', '2018-05-01', 123456789, 'J''ai faim', 'Non'),
-(3, 'Lolololo', 'Chez soso', '2018-05-03', 34, 'Content', 'Non');
+(2, 'Qui veut manger avec moi ?', 'PAris', '2018-05-01', 123456789, 'J''ai faim', 'Non');
 
 -- --------------------------------------------------------
 
@@ -253,15 +251,6 @@ CREATE TABLE IF NOT EXISTS `publie` (
   KEY `IDutilisateur_2` (`IDutilisateur`),
   KEY `IDpub_2` (`IDpub`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Contenu de la table `publie`
---
-
-INSERT INTO `publie` (`IDutilisateur`, `IDpub`) VALUES
-(2, 2),
-(1, 1),
-(1, 3);
 
 -- --------------------------------------------------------
 
@@ -307,29 +296,29 @@ CREATE TABLE IF NOT EXISTS `supprimer` (
 -- Contraintes pour la table `aime`
 --
 ALTER TABLE `aime`
-  ADD CONSTRAINT `kljsdlncqzskl` FOREIGN KEY (`IDutilisateur`) REFERENCES `auteur` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `klsdhihqezfhm` FOREIGN KEY (`IDpub`) REFERENCES `publication` (`IDPub`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `klsdhihqezfhm` FOREIGN KEY (`IDpub`) REFERENCES `publication` (`IDPub`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `kljsdlncqzskl` FOREIGN KEY (`IDutilisateur`) REFERENCES `auteur` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `contientpj`
 --
 ALTER TABLE `contientpj`
-  ADD CONSTRAINT `compj` FOREIGN KEY (`IDcom`) REFERENCES `commentaires` (`IDcom`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `pjcom` FOREIGN KEY (`IDPJ`) REFERENCES `pj` (`IDPJ`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `pjcom` FOREIGN KEY (`IDPJ`) REFERENCES `pj` (`IDPJ`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `compj` FOREIGN KEY (`IDcom`) REFERENCES `commentaires` (`IDcom`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `ecrit`
 --
 ALTER TABLE `ecrit`
-  ADD CONSTRAINT `auteurcom` FOREIGN KEY (`IDauteur`) REFERENCES `auteur` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `comauteur` FOREIGN KEY (`IDcom`) REFERENCES `commentaires` (`IDcom`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `comauteur` FOREIGN KEY (`IDcom`) REFERENCES `commentaires` (`IDcom`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `auteurcom` FOREIGN KEY (`IDauteur`) REFERENCES `auteur` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `envoyermessages`
 --
 ALTER TABLE `envoyermessages`
-  ADD CONSTRAINT `auteurmessage` FOREIGN KEY (`IDutilisateur`) REFERENCES `auteur` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `messageauteur` FOREIGN KEY (`IDmessage`) REFERENCES `messages` (`IDmessages`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `messageauteur` FOREIGN KEY (`IDmessage`) REFERENCES `messages` (`IDmessages`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `auteurmessage` FOREIGN KEY (`IDutilisateur`) REFERENCES `auteur` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `est_ecrit_dans`
@@ -356,8 +345,8 @@ ALTER TABLE `publie`
 -- Contraintes pour la table `recevoirmessages`
 --
 ALTER TABLE `recevoirmessages`
-  ADD CONSTRAINT `auteurmessagerece` FOREIGN KEY (`IDauteur`) REFERENCES `auteur` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `messagauteurrece` FOREIGN KEY (`IDmessage`) REFERENCES `messages` (`IDmessages`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `messagauteurrece` FOREIGN KEY (`IDmessage`) REFERENCES `messages` (`IDmessages`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `auteurmessagerece` FOREIGN KEY (`IDauteur`) REFERENCES `auteur` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `supprimer`
