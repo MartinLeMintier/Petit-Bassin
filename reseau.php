@@ -26,67 +26,35 @@
 <body>
 
 	<!-- Navbar -->
-  <nav role="navigation" class="navbar navbar-reverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <img src="images/logonew.png" class="logo" alt="" />
-        <a class="navbar-brand" href="#">PloufBook</a>
-      </div>
+	<nav role="navigation" class="navbar navbar-reverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<img src="images/logonew.png" class="logo" alt="" />
+				<a class="navbar-brand" href="#">PloufBook</a>
+	
+			</div>
 
-      <!-- Icone pour la deconnexion -->
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="Connexion.php"><span class="glyphicon glyphicon-off"></span> Déconnexion</a></li>
 
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><div class="col-md-4 col-md-offset-3">
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+				    <li><div class="col-md-4 col-md-offset-3">
             <form action="" class="search-form">
                 <div class="form-group has-feedback">
-                <label for="search" class="sr-only">Recherche</label>
-                <input type="text" class="form-control" name="search" id="search" placeholder="Rechercher...">
-                  <span class="glyphicon glyphicon-search form-control-feedback"></span>
-              </div>  
+            		<label for="search" class="sr-only">Recherche</label>
+            		<input type="text" class="form-control" name="search" id="search" placeholder="Rechercher...">
+              		<span class="glyphicon glyphicon-search form-control-feedback"></span>
+            	</div>	
             </form>
         </div></li>
-        </ul>
-      <!-- Icone pour la Notification -->
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="Connexion.php"><span class="glyphicon glyphicon-bell"></span> Notifications</a></li>
-
-        </ul>
-      <!-- Icone pour la messagerie -->
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="Connexion.php"><span class=" glyphicon glyphicon-envelope"></span> Messagerie</a></li>
-
-        </ul>
-      <!-- Icone pour la Mon reseau -->
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="reseau.php"><span class="glyphicon glyphicon-link"></span> Mon Réseau</a></li>
-
-        </ul>
-
-        <!-- Icone pour la Mon Profil -->
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="Profil.php"><span class="glyphicon glyphicon-user"></span> Vous</a></li>
-
-        </ul>
-      <!-- Icone pour la acceuil -->
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="AccueilUtilisateur.php"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
-
-        </ul>
-
-
-
-      </div>
-
       
-        
-      
+    
 
-    </div>
-  </nav>
+					<li><a href="deconnexion.php"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</nav>
 
 	<header class="header_pageAdmin">
 		<div id="titre_page">
@@ -97,7 +65,7 @@
 	</header>
 	<div class="container-fluid">
     <div class="Page_Amis">
-	<div class="col-sm-12 titre-amis" id="Reseau">
+	<div class="col-sm-12 titre-amis">
 
 	Mes Amis
 	</div>
@@ -136,7 +104,7 @@
 </div>
 
 <div class="Page_Pro">
-	<div class="col-sm-12 titre-pro" id="Pro">
+	<div class="col-sm-12 titre-pro">
 
 	Mon Réseau Professionnel
 	</div>
