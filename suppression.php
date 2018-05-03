@@ -37,7 +37,7 @@ if(isset($_GET['email']))
 				{ 
 					$monom = $bdd->prepare('DELETE FROM auteur WHERE adresse_mail= ?');
 					$monom->execute(array($adresse_mail));	
-					header('Location: Admin.php');					
+					header('Location: supprsuccess.php');					
 					exit;
 				}
 			}	

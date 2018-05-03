@@ -40,13 +40,17 @@ if(isset($_GET['name']) AND isset($_GET['Surename']) AND isset($_GET['email']) A
 		{
 			if($username==$confirm)
 			{
+				$lemax = $bdd->query('SELECT MAX(ID) AS ID FROM auteur');
+				
+				$mavaleur = $lemax->fetch();
+				
 				$monom = $bdd->prepare('INSERT INTO auteur(adresse_mail, mdp, prenom, nom, ID, photodepp) VALUES (:adresse_mail,:mdp,:prenom,:nom, :ID, :photodepp)');
 				$monom->execute(array(
 					'adresse_mail' => $adresse_mail,
 					'mdp' => $username,
 					'prenom' => $surename,
 					'nom' => $name,
-					'ID' => 4,
+					'ID' => $mavaleur['ID']+1,
 					'photodepp' => photodepp.jpg,
 					));	
 				header('Location: success2.php');	
