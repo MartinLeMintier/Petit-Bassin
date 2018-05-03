@@ -102,13 +102,17 @@ if(isset($_GET['username']) AND isset($_GET['email']) AND isset($_GET['choix']))
 						$truc2 = $newdonnees['mdp'];
 						$truc3 = $newdonnees['ID'];
 						$truc4 = $newdonnees['photodepp'];
+						$truc5 = $newdonnees['photodecouv'];
+						$truc6 = $newdonnees['cv'];
 
 						$_SESSION['PP']=$truc4;
 						$_SESSION['nom']=$truc;
+						$_SESSION['PC']=$truc5;
 						
 						$_SESSION['mdp']=$truc2;
 						$_SESSION['prenom']=$truc1;
 						$_SESSION['ID']=$truc3;
+						$_SESSION['cv']=$truc6;
 
 						
 

@@ -56,17 +56,6 @@ session_start();
 					<li><a href="Connexion.php"><span class="glyphicon glyphicon-off"></span> Déconnexion</a></li>
 
 				</ul>
-				<ul class="nav navbar-nav navbar-right">
-            <li><div class="col-md-4 col-md-offset-3">
-            <form action="" class="search-form">
-                <div class="form-group has-feedback">
-                <label for="search" class="sr-only">Recherche</label>
-                <input type="text" class="form-control" name="search" id="search" placeholder="Rechercher...">
-                  <span class="glyphicon glyphicon-search form-control-feedback"></span>
-              </div>  
-            </form>
-        </div></li>
-        </ul>
 			<!-- Icone pour la Notification -->
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="Connexion.php"><span class="glyphicon glyphicon-bell"></span> Notifications</a></li>
@@ -105,9 +94,13 @@ session_start();
 		</div>
 	</nav>
 
-	<header class="header_pageProfil">
+	<header>
 		<div id="titre_page">
 
+			<!-- On affcihe l'image du profil dans la base de données -->
+		<?php 
+		echo '<img class="pc" src="images/' . $_SESSION['PC'] . '">'; 
+		?>
 		
 		</div>
 
@@ -120,10 +113,16 @@ session_start();
 		<?php $t = $_SESSION['PP']; 
 
 		echo '<img class="pp" src="images/' . $t . '">'; 
+
 		?>
 
 
-		<a href="upload.html"><button type ='submit'  class ="btn btn-primary bouton"  >Changer photo</button>
+		<a href="upload.html"><button type ='submit'  class ="btn btn-primary bouton"  >Changer photo</button></a>
+		<a href="upload_cv.html"><button type ='submit'  class ="btn btn-primary bouton"  >Charger CV</button></a>
+		
+		<a href="upload_pc.html"><button type ='submit'  class ="btn btn-primary bouton"  >Changer Photo de fond</button></a>
+
+
 
 
 	</div>
@@ -140,6 +139,138 @@ session_start();
 	<p> <?php echo $_SESSION['ID']; ?> </p>
 	<p> <?php echo $_SESSION['email']; ?> </p>
 	<p> <?php echo $_SESSION['PP']; ?> </p>   -->
+<div class ="profilcenter">
+<div class="container text-center">    
+  <div class="row">
+    <div class="col-sm-3">
+      
+      </div>
+      
+      
+    </div>
+    <div class="col-sm-7 ">
+    
+
+      
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+           <p><?php echo $_SESSION['prenom'];?><br />
+           	<?php echo $_SESSION['nom'];?><br />
+           </p>
+           
+          </div>
+        </div>
+        <div class="col-sm-9">
+         <div class="well">
+
+
+          		<?php  
+
+
+          				try
+						{
+							$bdd = new PDO('mysql:host=localhost;dbname=petit_bateau;charset=utf8', 'root', '');
+
+							//$publications = $bdd->prepare('SELECT IDpub FROM publie WHERE IDutilisateur = ?');
+							$publications = $bdd->prepare('SELECT Texte FROM publication WHERE publication.IDPub IN (SELECT IDpub FROM publie WHERE IDutilisateur = ?)');
+							$publications->execute(array($_SESSION['ID']));
+							while($lire = $publications->fetch())
+							{
+								echo $lire[0];
+								$publicationn = $lire[0];
+
+							}
+
+
+
+							$bdd = null;
+						}
+						catch(Exception $e)
+						{
+							// En cas d'erreur, on affiche un message et on arrête tout
+							die('Erreur : '.$e->getMessage());
+						}     
+
+
+
+					
+     			
+
+          		?>
+
+            <div class="panel-body">
+          </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+           <p><?php echo $_SESSION['prenom'];?><br />
+           	<?php echo $_SESSION['nom'];?><br />
+           </p>
+ 
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+           <p><?php echo $_SESSION['prenom'];?><br />
+           	<?php echo $_SESSION['nom'];?><br />
+           </p>
+
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+           <p><?php echo $_SESSION['prenom'];?><br />
+           	<?php echo $_SESSION['nom'];?><br />
+           </p>
+
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="well">
+            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+          </div>
+        </div>
+      </div>     
+    </div>
+    
+    <div class="col-sm-2 well">
+      <div class="thumbnail">
+        <p>Mes Connaissances</p>
+        <img src="images/réseau.jpg" alt="Paris" width="400" height="300">
+        <br>
+        <br>
+        <button class="btn btn-primary">Amis</button>
+        <br>
+        <br>
+        <button class="btn btn-primary">Réseau</button>
+      </div>      
+    
+    </div>
+  </div>
+</div>
+</div>
+
 
 
 
