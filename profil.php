@@ -125,14 +125,15 @@ session_start();
 		?>
 
 
+		
+
+	</div>
+
+	<div class="bouton">
 		<a href="upload.html"><button type ='submit'  class ="btn btn-primary bouton"  >Changer photo</button></a>
 		<a href="upload_cv.html"><button type ='submit'  class ="btn btn-primary bouton"  >Charger CV</button></a>
 		
 		<a href="upload_pc.html"><button type ='submit'  class ="btn btn-primary bouton"  >Changer Photo de fond</button></a>
-
-
-
-
 	</div>
 
 

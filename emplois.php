@@ -80,7 +80,7 @@ session_start();
 
         <!-- Icone pour la Mon Profil -->
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="Connexion.php"><span class="glyphicon glyphicon-user"></span> Vous</a></li>
+          <li><a href="profil.php"><span class="glyphicon glyphicon-user"></span> Vous</a></li>
 
         </ul>
       <!-- Icone pour la acceuil -->
