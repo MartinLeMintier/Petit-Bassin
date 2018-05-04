@@ -66,6 +66,14 @@ session_start();
 					<li><a href="Connexion.php"><span class="	glyphicon glyphicon-envelope"></span> Messagerie</a></li>
 
 				</ul>
+
+				<!-- Icone pour les emplois -->
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="emplois.php"><span class="	glyphicon glyphicon-envelope"></span> Emlpois</a></li>
+
+				</ul>
+
+
 			<!-- Icone pour la Mon reseau -->
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="reseau.php"><span class="glyphicon glyphicon-link"></span> Mon Réseau</a></li>
@@ -139,6 +147,8 @@ session_start();
 	<p> <?php echo $_SESSION['ID']; ?> </p>
 	<p> <?php echo $_SESSION['email']; ?> </p>
 	<p> <?php echo $_SESSION['PP']; ?> </p>   -->
+
+
 <div class ="profilcenter">
 <div class="container text-center">    
   <div class="row">
@@ -161,6 +171,15 @@ session_start();
 							$publications = $bdd->prepare('SELECT Texte FROM publication WHERE publication.IDPub IN (SELECT IDpub FROM publie WHERE IDutilisateur = ?)');
 							$publications->execute(array($_SESSION['ID']));
 
+							$publicationsD = $bdd->prepare('SELECT Date FROM publication WHERE publication.IDPub IN (SELECT IDpub FROM publie WHERE IDutilisateur = ?)');
+							$publicationsD->execute(array($_SESSION['ID']));
+
+							$publicationsH = $bdd->prepare('SELECT humeur FROM publication WHERE publication.IDPub IN (SELECT IDpub FROM publie WHERE IDutilisateur = ?)');
+							$publicationsH->execute(array($_SESSION['ID']));	
+
+							$publicationsL = $bdd->prepare('SELECT Lieu FROM publication WHERE publication.IDPub IN (SELECT IDpub FROM publie WHERE IDutilisateur = ?)');
+							$publicationsL->execute(array($_SESSION['ID']));
+
 
 							?>
 
@@ -174,6 +193,28 @@ session_start();
 						          <div class="well">
 						           <p><?php echo $_SESSION['prenom'];?><br />
 						           	<?php echo $_SESSION['nom'];?><br />
+
+						           	<?php
+						           	$lireD = $publicationsD->fetch();
+						           	?>
+
+						           	<?php echo 'Le '. $lireD[0];?><br />
+
+						           	
+
+						           	<?php
+						           	$lireL = $publicationsL->fetch();
+						           	?>
+						           	
+						           	<?php echo 'Lieu : '. $lireL[0];?><br />
+
+						           	<?php
+						           	$lireH = $publicationsH->fetch();
+						           	?>
+						           	
+						           	<?php echo 'Humeur : '.$lireH[0];?><br />
+
+
 						           </p>
 						           
 						          </div>
@@ -184,11 +225,12 @@ session_start();
 						         	<?php
 
 
-							/*while(*/$lire = $publications->fetch();//)
-							//{
-								echo $lire[0];
+							$lire = $publications->fetch();
 
-							//}
+										
+							echo $lire[0];
+
+							
 
 								?>
 					            <div class="panel-body">
@@ -207,6 +249,26 @@ session_start();
 				          <div class="well">
 				           <p><?php echo $_SESSION['prenom'];?><br />
 				           	<?php echo $_SESSION['nom'];?><br />
+
+				           		<?php
+						           	$lireD = $publicationsD->fetch();
+						           	?>
+
+						           	<?php echo 'Le '. $lireD[0];?><br />
+
+						           	
+
+						           	<?php
+						           	$lireL = $publicationsL->fetch();
+						           	?>
+						           	
+						           	<?php echo 'Lieu : '. $lireL[0];?><br />
+
+						           	<?php
+						           	$lireH = $publicationsH->fetch();
+						           	?>
+						           	
+						           	<?php echo 'Humeur : '.$lireH[0];?><br />
 				           </p>
 				 
 				          </div>
@@ -234,6 +296,26 @@ session_start();
 				          <div class="well">
 				           <p><?php echo $_SESSION['prenom'];?><br />
 				           	<?php echo $_SESSION['nom'];?><br />
+
+				           		<?php
+						           	$lireD = $publicationsD->fetch();
+						           	?>
+
+						           	<?php echo 'Le '. $lireD[0];?><br />
+
+						           	
+
+						           	<?php
+						           	$lireL = $publicationsL->fetch();
+						           	?>
+						           	
+						           	<?php echo 'Lieu : '. $lireL[0];?><br />
+
+						           	<?php
+						           	$lireH = $publicationsH->fetch();
+						           	?>
+						           	
+						           	<?php echo 'Humeur : '.$lireH[0];?><br />
 				           </p>
 				 
 				          </div>
@@ -261,6 +343,26 @@ session_start();
 				          <div class="well">
 				           <p><?php echo $_SESSION['prenom'];?><br />
 				           	<?php echo $_SESSION['nom'];?><br />
+
+				           		<?php
+						           	$lireD = $publicationsD->fetch();
+						           	?>
+
+						           	<?php echo 'Le '. $lireD[0];?><br />
+
+						           	
+
+						           	<?php
+						           	$lireL = $publicationsL->fetch();
+						           	?>
+						           	
+						           	<?php echo 'Lieu : '. $lireL[0];?><br />
+
+						           	<?php
+						           	$lireH = $publicationsH->fetch();
+						           	?>
+						           	
+						           	<?php echo 'Humeur : '.$lireH[0];?><br />
 				           </p>
 				 
 				          </div>
@@ -288,6 +390,26 @@ session_start();
 				          <div class="well">
 				           <p><?php echo $_SESSION['prenom'];?><br />
 				           	<?php echo $_SESSION['nom'];?><br />
+
+				           		<?php
+						           	$lireD = $publicationsD->fetch();
+						           	?>
+
+						           	<?php echo 'Le '. $lireD[0];?><br />
+
+						           	
+
+						           	<?php
+						           	$lireL = $publicationsL->fetch();
+						           	?>
+						           	
+						           	<?php echo 'Lieu : '. $lireL[0];?><br />
+
+						           	<?php
+						           	$lireH = $publicationsH->fetch();
+						           	?>
+						           	
+						           	<?php echo 'Humeur : '.$lireH[0];?><br />
 				           </p>
 				 
 				          </div>
@@ -315,6 +437,26 @@ session_start();
 				          <div class="well">
 				           <p><?php echo $_SESSION['prenom'];?><br />
 				           	<?php echo $_SESSION['nom'];?><br />
+
+				           		<?php
+						           	$lireD = $publicationsD->fetch();
+						           	?>
+
+						           	<?php echo 'Le '. $lireD[0];?><br />
+
+						           	
+
+						           	<?php
+						           	$lireL = $publicationsL->fetch();
+						           	?>
+						           	
+						           	<?php echo 'Lieu : '. $lireL[0];?><br />
+
+						           	<?php
+						           	$lireH = $publicationsH->fetch();
+						           	?>
+						           	
+						           	<?php echo 'Humeur : '.$lireH[0];?><br />
 				           </p>
 				 
 				          </div>
@@ -361,7 +503,7 @@ session_start();
         <button class="btn btn-primary">Amis</button>
         <br>
         <br>
-        <button class="btn btn-primary">Réseau</button>
+        <a href="reseau.php"><button class="btn btn-primary">Réseau</button></a>
       </div>      
     
     </div>

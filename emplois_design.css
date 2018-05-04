@@ -5,6 +5,23 @@
     color: white !important;
 }
 
+.profilcenter
+{
+padding-left: 375px;
+
+}
+
+.header_pageEmplois
+{
+    background-image: url("images/emplois.jpg");
+         color: white;
+             top:0px;
+    margin-top: -22px;
+        height:450px;
+            border-bottom: 5px solid black;
+    border-top:5px solid black;;
+             background-size: cover;
+}
 
 
 .navbar-nav li a:hover, .navbar-nav li.active a {
