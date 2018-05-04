@@ -37,10 +37,10 @@ if(isset($_GET['search']))
 			die('Erreur : '.$e->getMessage());
 		}
 
-			$lenom = $bdd->prepare('SELECT nom, prenom FROM auteur WHERE nom=?');
+			$lenom = $bdd->prepare('SELECT nom, prenom, photodepp, photodecouv FROM auteur WHERE nom=?');
 			$lenom->execute(array($nom2));
 			
-			$lenom2 = $bdd->prepare('SELECT nom, prenom FROM auteur WHERE nom=?');
+			$lenom2 = $bdd->prepare('SELECT nom, prenom, photodepp, photodecouv FROM auteur WHERE nom=?');
 			$lenom2->execute(array($nom));
 		
 		    $donnees = $lenom->fetch();
@@ -51,27 +51,37 @@ if(isset($_GET['search']))
 					$_SESSION['nomrecherche']=$donnees['nom'];
 					if($prenom==$donnees['prenom'])
 					{
-						$_SESSION['prenomrecherche']=$donnees['nom'];
+						echo 'truuuuuuuuuuuc';
+						$_SESSION['prenomrecherche']=$donnees['prenom'];
+						$_SESSION['photorecherche']=$donnees['photodepp'];
+						$_SESSION['photodecouvrecherche']=$donnees['photodecouv'];
 						header('Location: profilrecherche.php');
-						echo 'ma bite';	
+						exit;
+						
 					}
 					if( $prenom2==$donnees['prenom'])
 					{
-						$_SESSION['prenomrecherche']=$donnees['nom'];
+						$_SESSION['prenomrecherche']=$donnees['prenom'];
+						$_SESSION['photorecherche']=$donnees['photodepp'];
+						$_SESSION['photodecouvrecherche']=$donnees['photodecouv'];
 						header('Location: profilrecherche.php');
-						echo 'ma bite';	
+						
 					}
 					if($prenom2==$donnees2['prenom'])
 					{
-						$_SESSION['prenomrecherche']=$donnees['nom'];
+						$_SESSION['prenomrecherche']=$donnees['prenom'];
+						$_SESSION['photorecherche']=$donnees['photodepp'];
+						$_SESSION['photodecouvrecherche']=$donnees['photodecouv'];
 						header('Location: profilrecherche.php');
-						echo 'ma bite';	
+						
 					}
 					if($prenom==$donnees2['prenom'])
 					{
-						$_SESSION['prenomrecherche']=$donnees['nom'];
+						$_SESSION['prenomrecherche']=$donnees['prenom'];
+						$_SESSION['photorecherche']=$donnees['photodepp'];
+						$_SESSION['photodecouvrecherche']=$donnees['photodecouv'];
 						header('Location: profilrecherche.php');
-						echo 'ma bite';	
+						
 					}
 						
 				}
@@ -80,27 +90,35 @@ if(isset($_GET['search']))
 					$_SESSION['nomrecherche']=$donnees2['nom'];
 					if($prenom==$donnees['prenom'])
 					{
-						$_SESSION['prenomrecherche']=$donnees['nom'];
+						$_SESSION['prenomrecherche']=$donnees2['prenom'];
+						$_SESSION['photorecherche']=$donnees2['photodepp'];
+						$_SESSION['photodecouvrecherche']=$donnees2['photodecouv'];
 						header('Location: profilrecherche.php');
-						echo 'ma bite';	
+							
 					}
 					if( $prenom2==$donnees['prenom'])
 					{
-						$_SESSION['prenomrecherche']=$donnees['nom'];
+						$_SESSION['prenomrecherche']=$donnees2['prenom'];
+						$_SESSION['photorecherche']=$donnees2['photodepp'];
+						$_SESSION['photodecouvrecherche']=$donnees2['photodecouv'];
 						header('Location: profilrecherche.php');
-						echo 'ma bite';	
+						
 					}
 					if($prenom2==$donnees2['prenom'])
 					{
-						$_SESSION['prenomrecherche']=$donnees['nom'];
+						$_SESSION['prenomrecherche']=$donnees2['prenom'];
+						$_SESSION['photorecherche']=$donnees2['photodepp'];
+						$_SESSION['photodecouvrecherche']=$donnees2['photodecouv'];
 						header('Location: profilrecherche.php');
-						echo 'ma bite';	
+						
 					}
 					if($prenom==$donnees2['prenom'])
 					{
-						$_SESSION['prenomrecherche']=$donnees['nom'];
+						$_SESSION['prenomrecherche']=$donnees2['prenom'];
+						$_SESSION['photorecherche']=$donnees2['photodepp'];
+						$_SESSION['photodecouvrecherche']=$donnees2['photodecouv'];
 						header('Location: profilrecherche.php');
-						echo 'ma bite';	
+						
 					}
 						
 				}

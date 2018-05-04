@@ -129,6 +129,13 @@ session_start();
 
 	</div>
 
+	
+
+
+    <div class="placer-nom">
+	<!-- On affiche le nom de l'utilisateur -->
+	<h1 class="test"><?php echo $_SESSION['prenom']; echo " "; echo $_SESSION['nom']; ?></h1> 
+	</div>
 	<div class="bouton">
 		<a href="upload.html"><button type ='submit'  class ="btn btn-primary bouton"  >Changer photo</button></a>
 		<a href="upload_cv.html"><button type ='submit'  class ="btn btn-primary bouton"  >Charger CV</button></a>
@@ -138,12 +145,6 @@ session_start();
 		<a href="newpubli.php"><button type ='submit'  class ="btn btn-primary bouton"  >Poster !</button></a>
 	</div>
 
-
-
-
-	<!-- On affiche le nom de l'utilisateur -->
-	<h1 class="test"><?php echo $_SESSION['prenom']; echo " "; echo $_SESSION['nom']; ?></h1> 
-	
 
 <!-- On en a pas besoin de ca 
 	<p> <?php echo $_SESSION['mdp']; ?> </p>

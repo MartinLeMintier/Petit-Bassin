@@ -91,7 +91,7 @@ function AjouterCommentaire4(){
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><div class="search-container">
-    <form action="/action_page.php">
+    <form action="recherche.php">
       <input type="text" placeholder="Rechercher..." name="search">
       <button type="submit"><i class="glyphicon glyphicon-search"></i></button>
     </form></li>
@@ -147,7 +147,7 @@ function AjouterCommentaire4(){
          <!-- <img src="images/Utilisateur.png" class="img-circle" height="65" width="65" alt="Avatar">-->
         </div>
         <div class="well">
-          <p><a href="#">Consulter les Offres d'Emplois</a></p>
+          <p><a href="emplois.php">Consulter les Offres d'Emplois</a></p>
           <p>
           </p>
         </div>
@@ -255,7 +255,7 @@ function AjouterCommentaire4(){
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
+                    <h4 class="modal-title">Commentaire</h4>
                   </div>
                   <div class="modal-body">
                     <input type="text" id="valeur2" class="form-control">
@@ -310,7 +310,7 @@ function AjouterCommentaire4(){
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
+                    <h4 class="modal-title">Commentaire</h4>
                   </div>
                   <div class="modal-body">
                     <input type="text" id="valeur3" class="form-control">
@@ -364,7 +364,7 @@ function AjouterCommentaire4(){
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Modal Header</h4>
+                    <h4 class="modal-title">Commentaire</h4>
                   </div>
                   <div class="modal-body">
                     <input type="text" id="valeur4" class="form-control">
