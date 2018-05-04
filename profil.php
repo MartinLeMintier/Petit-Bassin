@@ -69,7 +69,7 @@ session_start();
 
 				<!-- Icone pour les emplois -->
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="emplois.php"><span class="	glyphicon glyphicon-envelope"></span> Emlpois</a></li>
+					<li><a href="emplois.php"><span class="	glyphicon glyphicon-piggy-bank"></span> Emlpois</a></li>
 
 				</ul>
 
@@ -82,7 +82,7 @@ session_start();
 
 				<!-- Icone pour la Mon Profil -->
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="Connexion.php"><span class="glyphicon glyphicon-user"></span> Vous</a></li>
+					<li><a href="profil.php"><span class="glyphicon glyphicon-user"></span> Vous</a></li>
 
 				</ul>
 			<!-- Icone pour la acceuil -->
@@ -134,6 +134,8 @@ session_start();
 		<a href="upload_cv.html"><button type ='submit'  class ="btn btn-primary bouton"  >Charger CV</button></a>
 		
 		<a href="upload_pc.html"><button type ='submit'  class ="btn btn-primary bouton"  >Changer Photo de fond</button></a>
+
+		<a href="newpubli.php"><button type ='submit'  class ="btn btn-primary bouton"  >Poster !</button></a>
 	</div>
 
 
@@ -169,16 +171,16 @@ session_start();
 							$bdd = new PDO('mysql:host=localhost;dbname=petit_bateau;charset=utf8', 'root', '');
 
 							//$publications = $bdd->prepare('SELECT IDpub FROM publie WHERE IDutilisateur = ?');
-							$publications = $bdd->prepare('SELECT Texte FROM publication WHERE publication.IDPub IN (SELECT IDpub FROM publie WHERE IDutilisateur = ?)');
+							$publications = $bdd->prepare('SELECT Texte FROM publication WHERE publication.IDPub IN (SELECT IDpub FROM publie WHERE IDutilisateur = ?) ORDER BY `IDpub` DESC');
 							$publications->execute(array($_SESSION['ID']));
 
-							$publicationsD = $bdd->prepare('SELECT Date FROM publication WHERE publication.IDPub IN (SELECT IDpub FROM publie WHERE IDutilisateur = ?)');
+							$publicationsD = $bdd->prepare('SELECT Date FROM publication WHERE publication.IDPub IN (SELECT IDpub FROM publie WHERE IDutilisateur = ?)ORDER BY `IDpub` DESC');
 							$publicationsD->execute(array($_SESSION['ID']));
 
-							$publicationsH = $bdd->prepare('SELECT humeur FROM publication WHERE publication.IDPub IN (SELECT IDpub FROM publie WHERE IDutilisateur = ?)');
+							$publicationsH = $bdd->prepare('SELECT humeur FROM publication WHERE publication.IDPub IN (SELECT IDpub FROM publie WHERE IDutilisateur = ?)ORDER BY `IDpub` DESC');
 							$publicationsH->execute(array($_SESSION['ID']));	
 
-							$publicationsL = $bdd->prepare('SELECT Lieu FROM publication WHERE publication.IDPub IN (SELECT IDpub FROM publie WHERE IDutilisateur = ?)');
+							$publicationsL = $bdd->prepare('SELECT Lieu FROM publication WHERE publication.IDPub IN (SELECT IDpub FROM publie WHERE IDutilisateur = ?)ORDER BY `IDpub` DESC');
 							$publicationsL->execute(array($_SESSION['ID']));
 
 
@@ -500,9 +502,7 @@ session_start();
         <p>Mes Connaissances</p>
         <img src="images/réseau.jpg" alt="Paris" width="400" height="300">
         <br>
-        <br>
-        <button class="btn btn-primary">Amis</button>
-        <br>
+
         <br>
         <a href="reseau.php"><button class="btn btn-primary">Réseau</button></a>
       </div>      

@@ -126,6 +126,9 @@ session_start();
     $emplois = $bdd->query('SELECT Titre FROM `emplois` ORDER BY `IDemploi` DESC');
     $emplois->execute();
 
+    $emploisTel = $bdd->query('SELECT Tel FROM `emplois` ORDER BY `IDemploi` DESC');
+    $emploisTel->execute();
+
 
 
 
@@ -142,57 +145,11 @@ session_start();
                         
                         <?php echo $lire[0];?><br />
 
-            </p>
-
-            <div class="panel-body">
-              
-                   
-           
-          </div>
-          <button type="button" class="btn btn-default btn-sm">
-                <span class="glyphicon glyphicon-thumbs-up"></span> Aimer
-              </button>
-          </div>
-        </div>
-      </div>
-
-            <div class="row">
-
-        <div class="col-sm-9">
-          <div class="well">
-            <p>
-              
                         <?php
-                        $lire = $emplois->fetch();
+                        $lire2 = $emploisTel->fetch();
                         ?>
                         
-                        <?php echo $lire[0];?><br />
-
-            </p>
-
-            <div class="panel-body">
-              
-                   
-           
-          </div>
-          <button type="button" class="btn btn-default btn-sm">
-                <span class="glyphicon glyphicon-thumbs-up"></span> Aimer
-              </button>
-          </div>
-        </div>
-      </div>
-
-            <div class="row">
-
-        <div class="col-sm-9">
-          <div class="well">
-            <p>
-              
-                        <?php
-                        $lire = $emplois->fetch();
-                        ?>
-                        
-                        <?php echo $lire[0];?><br />
+                        <?php echo "Tel de l'employeur : ".$lire2[0];?><br />
 
             </p>
 
@@ -220,6 +177,12 @@ session_start();
                         
                         <?php echo $lire[0];?><br />
 
+                        <?php
+                        $lire2 = $emploisTel->fetch();
+                        ?>
+                        
+                        <?php echo "Tel de l'employeur : ".$lire2[0];?><br />
+
             </p>
 
             <div class="panel-body">
@@ -246,6 +209,12 @@ session_start();
                         
                         <?php echo $lire[0];?><br />
 
+                        <?php
+                        $lire2 = $emploisTel->fetch();
+                        ?>
+                        
+                        <?php echo "Tel de l'employeur : ".$lire2[0];?><br />
+
             </p>
 
             <div class="panel-body">
@@ -271,6 +240,75 @@ session_start();
                         ?>
                         
                         <?php echo $lire[0];?><br />
+
+                        <?php
+                        $lire2 = $emploisTel->fetch();
+                        ?>
+                        
+                        <?php echo "Tel de l'employeur : ".$lire2[0];?><br />
+
+            </p>
+
+            <div class="panel-body">
+              
+                   
+           
+          </div>
+          <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-thumbs-up"></span> Aimer
+              </button>
+          </div>
+        </div>
+      </div>
+
+            <div class="row">
+
+        <div class="col-sm-9">
+          <div class="well">
+            <p>
+              
+                        <?php
+                        $lire = $emplois->fetch();
+                        ?>
+                        
+                        <?php echo $lire[0];?><br />
+
+                        <?php
+                        $lire2 = $emploisTel->fetch();
+                        ?>
+                        
+                        <?php echo "Tel de l'employeur : ".$lire2[0];?><br />
+
+            </p>
+
+            <div class="panel-body">
+              
+                   
+           
+          </div>
+          <button type="button" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-thumbs-up"></span> Aimer
+              </button>
+          </div>
+        </div>
+      </div>
+
+            <div class="row">
+
+        <div class="col-sm-9">
+          <div class="well">
+            <p>
+              
+                        <?php
+                        $lire = $emplois->fetch();
+                        ?>
+                        
+                        <?php echo $lire[0];?><br />
+                        <?php
+                        $lire2 = $emploisTel->fetch();
+                        ?>
+                        
+                        <?php echo "Tel de l'employeur : ".$lire2[0];?><br />
 
             </p>
 
