@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html>
 <title>PloufBook</title>
@@ -22,6 +28,9 @@
 
 
 </script>
+
+
+
 
 <body>
 
@@ -101,10 +110,42 @@
 
 	Mes Amis
 	</div>
+	<div id="myDiv1">
+		</div>
+     
+     	<script>
+     	//<?php echo 'cacaprout';?>
 
-	<div class="col-sm-3">
+	    var nb= '<?php echo $_SESSION['NbAmis'];?>';
+	    var nb2= '<?php echo $_SESSION['monami1'];?>';
+	    var nb3= '<?php echo $_SESSION['monami2'];?>';
+		
+	    document.getElementById('myDiv1').innerHTML += '<p> '+ nb +'</p>';
+
+		//for (var i=0;i<nb;i++)
+		//	 var j='<?php //echo $_SESSION['monami']?>[i]<?php;?>';
+		document.getElementById('myDiv1').innerHTML += '<p> '+ nb2 +'</p>';
+		document.getElementById('myDiv1').innerHTML += '<p> '+ nb3 +'</p>';
+		
+		
+			
+		</script>
+		<script>
+     	//<?php echo 'cacaprout';?>
+	    var nb4= '<?php echo $_SESSION['monami4'];?>';
+		document.getElementById('myDiv1').innerHTML += '<p> '+ nb4 +'</p>';
+		
+		
+			
+		</script>
+
+		
+
+
+	<!--<div class="col-sm-3">
 	<div class="well">
-           Ami1
+          
+           
           </div>
 	
 	</div>
@@ -133,7 +174,7 @@
 	Ami5
 	</div>
 	</div>
-</div>
+</div>-->
 
 <div class="Page_Pro">
 	<div class="col-sm-12 titre-pro" id="Pro">

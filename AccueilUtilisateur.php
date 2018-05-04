@@ -112,7 +112,7 @@ function AjouterCommentaire4(){
         </ul>
         <!-- Icone pour la Mon reseau -->
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="reseau.php"><span class="glyphicon glyphicon-link"></span> Mon Réseau</a></li>
+          <li><a href="AfficheAmis.php"><span class="glyphicon glyphicon-link"></span> Mon Réseau</a></li>
 
         </ul>
 
