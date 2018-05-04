@@ -90,15 +90,11 @@ function AjouterCommentaire4(){
 
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><div class="col-md-4 col-md-offset-3">
-            <form action="" class="search-form">
-              <div class="form-group has-feedback">
-                <label for="search" class="sr-only">Recherche</label>
-                <input type="text" class="form-control" name="search" id="search" placeholder="Rechercher...">
-                <span class="glyphicon glyphicon-search form-control-feedback"></span>
-              </div>  
-            </form>
-          </div></li>
+          <li><div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Rechercher..." name="search">
+      <button type="submit"><i class="glyphicon glyphicon-search"></i></button>
+    </form></li>
         </ul>
         <!-- Icone pour la Notification -->
         <ul class="nav navbar-nav navbar-right">
