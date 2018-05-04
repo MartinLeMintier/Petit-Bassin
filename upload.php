@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+
 // Testons si le fichier a bien été envoyé et s'il n'y a pas d'erreur
 if (isset($_FILES['monfichier']) AND $_FILES['monfichier']['error'] == 0)
 {
@@ -27,6 +28,7 @@ if (isset($_FILES['monfichier']) AND $_FILES['monfichier']['error'] == 0)
           
 
           $_SESSION['PP']=$fichier;
+          //header('Location: profil.php');
 
 
 
