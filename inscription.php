@@ -51,7 +51,7 @@ if(isset($_GET['name']) AND isset($_GET['Surename']) AND isset($_GET['email']) A
 					'prenom' => $surename,
 					'nom' => $name,
 					'ID' => $mavaleur['ID']+1,
-					'photodepp' => photodepp.jpg,
+					'photodepp' => 'base.jpg',
 					));	
 				header('Location: success2.php');	
 			}
