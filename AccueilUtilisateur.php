@@ -170,50 +170,47 @@ function AjouterCommentaire4(){
         </div>
 
         <div class="row">
-          <div class="col-sm-3">
-            <div class="well" id="lala">
-             <p>Nom Personne</p>
-             <p> d'humeur : HUMEUR</p>
-             <p> le : DATE </p>
-           </div>
-         </div>
+         
 
 
-         <div class="col-sm-9">
-          <div class="well">
-            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
-
-            <div class="panel-body">
 
 
-            </div>
-            <button type="button" class="btn btn-default btn-sm">
-              <span class="glyphicon glyphicon-thumbs-up"></span> Aimer
-            </button>
-            <button type="button" class="btn btn-info" data-toggle="modal" name="modal1" data-target="#myModal">commenter</button>
-            <div class="modal fade" id="myModal" role="dialog">
-              <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Commentaire</h4>
-                  </div>
-                  <div class="modal-body">
-                    <input type="text" id="valeur1" class="form-control">
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" onclick="AjouterCommentaire1()" class="btn btn-default" data-dismiss="modal">Publier</button>
-                  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         <?php
+            try {
+
+              $bdd = new PDO('mysql:host=localhost;dbname=petit_bateau;charset=utf8', 'root', '');
+
+                $emplois = $bdd->query('SELECT Texte FROM `Publication` ORDER BY `IDPub` DESC');
+                $emplois->execute();
+
+                $emplois2 = $bdd->query('SELECT Date FROM `Publication` ORDER BY `IDPub` DESC');
+                $emplois2->execute();
+
+                $publications = $bdd->prepare('SELECT Texte FROM publication WHERE publication.IDPub IN (SELECT IDpub FROM publie WHERE IDutilisateur = ?) ORDER BY `IDpub` DESC');
+
+                
+
+                ?>
+
                 </div>
-              </div>
-            </div>
-          </div>
-          <div id="myDiv1">
-          
-      </div>
-
-</div>
-</div>
 
       <div class="row">
         <div class="col-sm-3">
@@ -221,12 +218,29 @@ function AjouterCommentaire4(){
           <div class="well">
            <p>Nom Personne</p>
            <p> d'humeur : HUMEUR</p>
-           <p> le : DATE </p>
+           <p> le : 
+            <?php 
+            $lire2 = $emplois2->fetch();
+                        ?>
+                        
+                        <?php echo $lire2[0];?><br /> </p>
          </div>
        </div>
        <div class="col-sm-9">
           <div class="well">
-            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+            <p>
+              
+              <?php
+                        $lire = $emplois->fetch();
+                        ?>
+                        
+                        <?php echo $lire[0];?><br />
+
+                        
+
+
+
+            </p>
 
             <div class="panel-body">
 
@@ -258,19 +272,30 @@ function AjouterCommentaire4(){
       </div>
     </div>
 
-</div>
+</div>    
 
     <div class="row">
       <div class="col-sm-3">
         <div class="well">
          <p>Nom Personne</p>
          <p> d'humeur : HUMEUR</p>
-         <p> le : DATE </p>
+         <p> le :<?php 
+            $lire2 = $emplois2->fetch();
+                        ?>
+                        
+                        <?php echo $lire2[0];?><br /> </p> </p>
        </div>
      </div>
      <div class="col-sm-9">
           <div class="well">
-            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+            <p> <?php
+                        $lire = $emplois->fetch();
+                        ?>
+                        
+                        <?php echo $lire[0];?><br />
+
+
+
 
             <div class="panel-body">
 
@@ -309,12 +334,22 @@ function AjouterCommentaire4(){
       <div class="well">
        <p>Nom Personne</p>
        <p> d'humeur : HUMEUR</p>
-       <p> le : DATE </p>
+       <p> le : <?php 
+            $lire2 = $emplois2->fetch();
+                        ?>
+                        
+                        <?php echo $lire2[0];?><br /> </p> </p>
      </div>
    </div>
    <div class="col-sm-9">
           <div class="well">
-            <p>Just Forgot that I had to mention something about someone to someone about how I forgot something, but now I forgot it. Ahh, forget it! Or wait. I remember.... no I don't.</p>
+            <p> <?php
+                        $lire = $emplois->fetch();
+                        ?>
+                        
+                        <?php echo $lire[0];?><br />
+
+
 
             <div class="panel-body">
 
@@ -345,7 +380,29 @@ function AjouterCommentaire4(){
           
       </div>
   </div>
-</div>    
+</div>  
+
+
+
+<?php
+              
+            } catch (Exception $e) {
+              
+            }
+
+                  
+
+         ?>
+
+
+
+
+
+
+
+
+
+
 </div>
 
 <div class="col-sm-2 well">
@@ -361,7 +418,7 @@ function AjouterCommentaire4(){
   </div>   
   </div>   
 
-</div>
+
 
 
 

@@ -1,42 +1,30 @@
 <?php
 
 session_start();
-
-
-$dossier = 'images/';
-$fichier = basename($_FILES['avatar']['name']);
-$taille_maxi = 100000000000000;
-$taille = filesize($_FILES['avatar']['tmp_name']);
-$extensions = array('.png', '.gif', '.jpg', '.jpeg');
-$extension = strrchr($_FILES['avatar']['name'], '.'); 
-//Début des vérifications de sécurité...
-if(!in_array($extension, $extensions)) //Si l'extension n'est pas dans le tableau
+// Testons si le fichier a bien été envoyé et s'il n'y a pas d'erreur
+if (isset($_FILES['monfichier']) AND $_FILES['monfichier']['error'] == 0)
 {
-     $erreur = 'Vous devez uploader un fichier de type png, gif, jpg, jpeg, txt ou doc...';
-}
-if($taille>$taille_maxi)
-{
-     $erreur = 'Le fichier est trop gros...';
-}
-if(!isset($erreur)) //S'il n'y a pas d'erreur, on upload
-{
-     //On formate le nom du fichier ici...
-
-     //$fichier ='pp.jpg';
-
-
-
-
-     if(move_uploaded_file($_FILES['avatar']['tmp_name'], $dossier . $fichier)) //Si la fonction renvoie TRUE, c'est que ça a fonctionné...
+        // Testons si le fichier n'est pas trop gros
+        if ($_FILES['monfichier']['size'] <= 1000000)
+        {
+                // Testons si l'extension est autorisée
+                $infosfichier = pathinfo($_FILES['monfichier']['name']);
+                $extension_upload = $infosfichier['extension'];
+                $extensions_autorisees = array('jpg', 'jpeg', 'gif', 'png');
+                if (in_array($extension_upload, $extensions_autorisees))
+                {
+                        // On peut valider le fichier et le stocker définitivement
+                    
+                        move_uploaded_file($_FILES['monfichier']['tmp_name'], 'images/' . basename($_FILES['monfichier']['name']));
+                        try
      {
-          echo 'Upload ok !';
 
-               try
-     {
+          $fichier =basename($_FILES['monfichier']['name']);
           $bdd = new PDO('mysql:host=localhost;dbname=petit_bateau;charset=utf8', 'root', '');
           $truc = $bdd->prepare('UPDATE auteur SET photodepp = ? WHERE adresse_mail = ?');
           $truc->execute(array($fichier, $_SESSION['email']));
 
+          
 
           $_SESSION['PP']=$fichier;
 
@@ -49,16 +37,10 @@ if(!isset($erreur)) //S'il n'y a pas d'erreur, on upload
                die('Erreur : '.$e->getMessage());
           }
 
-
-          header('Location: profil.php');
-     }
-     else //Sinon (la fonction renvoie FALSE).
-     {
-          echo 'Echec de l\'upload !';
-     }
-}
-else
-{
-     echo $erreur;
+                        echo "L'envoi a bien été effectué !";
+                }
+        }
 }
 ?>
+
+ 
