@@ -47,7 +47,7 @@ session_start();
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<img src="images/logonew.png" class="logo" alt="" />
-				<a class="navbar-brand" href="#">PloufBook</a>
+				<a class="navbar-brand" href="AccueilUtilisateur.php">PloufBook</a>
 			</div>
 
 			<!-- Icone pour la deconnexion -->
@@ -76,7 +76,7 @@ session_start();
 
 			<!-- Icone pour la Mon reseau -->
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="reseau.php"><span class="glyphicon glyphicon-link"></span> Mon Réseau</a></li>
+					<li><a href="AfficheAmis.php"><span class="glyphicon glyphicon-link"></span> Mon Réseau</a></li>
 
 				</ul>
 

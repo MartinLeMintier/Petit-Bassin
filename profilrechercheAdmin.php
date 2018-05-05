@@ -47,7 +47,7 @@ session_start();
     <div class="container-fluid">
       <div class="navbar-header">
         <img src="images/logonew.png" class="logo" alt="" />
-        <a class="navbar-brand" href="AccueilUtilisateur.php">PloufBook</a>
+        <a class="navbar-brand" href="Admin.php">PloufBook</a>
       </div>
 
       <!-- Icone pour la deconnexion -->
@@ -63,33 +63,7 @@ session_start();
       <button type="submit"><i class="glyphicon glyphicon-search"></i></button>
     </form></li>
         </ul>
-        <!-- Icone pour la Notification -->
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="Connexion.php"><span class="glyphicon glyphicon-bell"></span> Notifications</a></li>
-
-        </ul>
-        <!-- Icone pour la messagerie -->
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="Connexion.php"><span class=" glyphicon glyphicon-envelope"></span> Messagerie</a></li>
-
-        </ul>
-        <!-- Icone pour la Mon reseau -->
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="AfficheAmis.php"><span class="glyphicon glyphicon-link"></span> Mon Réseau</a></li>
-
-        </ul>
-
-        <!-- Icone pour la Mon Profil -->
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="Profil.php"><span class="glyphicon glyphicon-user"></span> Vous</a></li>
-
-        </ul>
-        <!-- Icone pour la acceuil -->
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="AccueilUtilisateur.php"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
-
-        </ul>
-
+    
 
 
       </div>
@@ -127,14 +101,24 @@ session_start();
 
 	</div>
 
+
 	
 
 <div class="placer-nom">
 
 
 	<!-- On affiche le nom de l'utilisateur -->
-	<h1 class="test"><?php echo $_SESSION['prenomrecherche']; echo " "; echo $_SESSION['nomrecherche']; ?></h1> 
-	</div>
+	<h1 class="test"><?php echo $_SESSION['prenomrecherche']; echo " "; echo $_SESSION['nomrecherche']; ?></h1>
+
+ </div>
+
+  <div class="bouton">
+    <a href="uploadRecherche.html"><button type ='submit'  class ="btn btn-primary bouton"  >Changer photo</button></a>    
+    <a href="uplad_recherche_pc.html"><button type ='submit'  class ="btn btn-primary bouton"  >Changer Photo de fond</button></a>
+
+   
+  </div> 
+	
 
 <!-- On en a pas besoin de ca 
 	<p> <?php echo $_SESSION['mdp']; ?> </p>
@@ -150,19 +134,7 @@ session_start();
       
       
     
-    <div class="col-sm-2 well">
-      <div class="thumbnail">
-        <p>Mes Connaissances</p>
-        <img src="images/réseau.jpg" alt="Paris" width="400" height="300">
-        <br>
-
-        <br>
-        <a href="ajoutami.php"><button class="btn btn-primary">Demander en ami</button></a>
-        <br><br><br>
-        <a href="ajoutcollegue.php"><button class="btn btn-primary">Ajouter collègue</button></a>
-      </div>      
     
-    </div>
   </div>
 </div>
 </div>

@@ -39,13 +39,13 @@ session_start();
     <div class="container-fluid">
       <div class="navbar-header">
         <img src="images/logonew.png" class="logo" alt="" />
-        <a class="navbar-brand" href="#">PloufBook</a>
+        <a class="navbar-brand" href="AccueilUtilisateur.php">PloufBook</a>
       </div>
 
       <!-- Icone pour la deconnexion -->
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="Connexion.php"><span class="glyphicon glyphicon-off"></span> Déconnexion</a></li>
+          <li><a href="deconnexion.php"><span class="glyphicon glyphicon-off"></span> Déconnexion</a></li>
 
         </ul>
         <ul class="nav navbar-nav navbar-right">

@@ -80,13 +80,13 @@ function AjouterCommentaire4(){
     <div class="container-fluid">
       <div class="navbar-header">
         <img src="images/logonew.png" class="logo" alt="" />
-        <a class="navbar-brand" href="#">PloufBook</a>
+        <a class="navbar-brand" href="AccueilUtilisateur.php">PloufBook</a>
       </div>
 
       <!-- Icone pour la deconnexion -->
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="Connexion.php"><span class="glyphicon glyphicon-off"></span> Déconnexion</a></li>
+          <li><a href="deconnexion.php"><span class="glyphicon glyphicon-off"></span> Déconnexion</a></li>
 
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -162,7 +162,7 @@ function AjouterCommentaire4(){
               <div class="panel-body">
                 <input type="text" class="form-control"  placeholder="Que voulez-vous dire ?">
                 <button type="button" class="btn btn-default btn-sm">
-                  <span class="glyphicon glyphicon-thumbs-up"></span> Aimer
+                  <span class="glyphicon glyphicon-comment"></span> Publier
                 </button>     
               </div>
             </div>
@@ -411,10 +411,10 @@ function AjouterCommentaire4(){
     <img src="images/réseau.jpg" alt="Paris" width="400" height="300">
     <br>
     <br>
-    <a href="reseau.php#Reseau"<button class="btn btn-primary">Amis</button></a>
+    <a href="AfficheAmis.php"<button class="btn btn-primary">Amis</button></a>
     <br>
     <br>
-    <a href="reseau.php#Pro"<button class="btn btn-primary">Réseau</button></a>
+    <a href="AfficheAmis.php"<button class="btn btn-primary">Réseau</button></a>
   </div>   
   </div>   
 

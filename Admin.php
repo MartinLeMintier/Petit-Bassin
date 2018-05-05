@@ -29,22 +29,18 @@
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<img src="images/logonew.png" class="logo" alt="" />
-				<a class="navbar-brand" href="#">PloufBook</a>
+				<a class="navbar-brand" href="Admin.php">PloufBook</a>
 	
 			</div>
 
 
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
-				    <li><div class="col-md-4 col-md-offset-3">
-            <form action="" class="search-form">
-                <div class="form-group has-feedback">
-            		<label for="search" class="sr-only">Recherche</label>
-            		<input type="text" class="form-control" name="search" id="search" placeholder="Rechercher...">
-              		<span class="glyphicon glyphicon-search form-control-feedback"></span>
-            	</div>	
-            </form>
-        </div></li>
+				    <li><div class="search-container">
+    <form action="profilrechercheAdmin.php">
+      <input type="text" placeholder="Rechercher..." name="search">
+      <button type="submit"><i class="glyphicon glyphicon-search"></i></button>
+    </form></li>
       
     
 
