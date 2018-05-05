@@ -53,7 +53,7 @@ session_start();
 			<!-- Icone pour la deconnexion -->
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="Connexion.php"><span class="glyphicon glyphicon-off"></span> Déconnexion</a></li>
+					<li><a href="deconnexion.php"><span class="glyphicon glyphicon-off"></span> Déconnexion</a></li>
 
 				</ul>
 			<!-- Icone pour la Notification -->
@@ -505,7 +505,7 @@ session_start();
         <br>
 
         <br>
-        <a href="reseau.php"><button class="btn btn-primary">Réseau</button></a>
+        <a href="AfficheAmis.php"><button class="btn btn-primary">Réseau</button></a>
       </div>      
     
     </div>

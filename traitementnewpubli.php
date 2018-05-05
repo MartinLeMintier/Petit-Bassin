@@ -56,7 +56,7 @@ if(isset($_GET['text']) AND isset($_GET['lieu']))
 				$newemplois2 = $bdd->prepare('INSERT INTO publie (`IDutilisateur`, `IDpub`) VALUES (:IDutilisateur, :IDpub);');
 				$newemplois2->execute(array('IDutilisateur'=> $_SESSION["ID"], 'IDpub'=>  $maxim2));
 
-				//header('Location: profil.php');
+				header('Location: profil.php');
 		
 	} catch (Exception $e) {
 		// En cas d'erreur, on affiche un message et on arrête tout

@@ -46,7 +46,7 @@ if(isset($_GET['name']) AND isset($_GET['surename']) AND isset($_GET['email']) A
 				
 				$mavaleur = $lemax->fetch();
 				
-				$monom = $bdd->prepare('INSERT INTO auteur(adresse_mail, mdp, prenom, nom, ID, photodepp) VALUES (:adresse_mail,:mdp,:prenom,:nom, :ID, :photodepp)');
+				$monom = $bdd->prepare('INSERT INTO auteur(adresse_mail, mdp, prenom, nom, ID, photodepp, photodecouv) VALUES (:adresse_mail,:mdp,:prenom,:nom, :ID, :photodepp, :photodecouv)');
 				$monom->execute(array(
 					'adresse_mail' => $adresse_mail,
 					'mdp' => $username,
@@ -54,6 +54,7 @@ if(isset($_GET['name']) AND isset($_GET['surename']) AND isset($_GET['email']) A
 					'nom' => $name,
 					'ID' => $mavaleur['ID']+1,
 					'photodepp' => 'base.jpg',
+					 'photodecouv' => 'pcbase.jpg',
 					));	
 				header('Location: success.php');
 				}

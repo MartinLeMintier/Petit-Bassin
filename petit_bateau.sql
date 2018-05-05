@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 04 mai 2018 à 09:16
+-- Généré le :  sam. 05 mai 2018 à 12:03
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -79,7 +79,8 @@ CREATE TABLE IF NOT EXISTS `amis` (
 
 INSERT INTO `amis` (`ID`, `IDami`) VALUES
 (1, 2),
-(1, 3);
+(1, 3),
+(2, 1);
 
 -- --------------------------------------------------------
 
@@ -104,10 +105,9 @@ CREATE TABLE IF NOT EXISTS `auteur` (
 --
 
 INSERT INTO `auteur` (`adresse_mail`, `mdp`, `prenom`, `nom`, `photodepp`, `photodecouv`, `ID`) VALUES
-('adresse', 'mdp', 'pre', 'nom', 'photo', 'photo', 0),
-('mail1@edu.ece.fr', 'mdp1', 'Marie', 'Yayawi', 'base.jpg', '', 1),
-('mail2@edu.ece.fr', 'mdp2', 'amandine', 'duc', '', '', 2),
-('caca', 'caca', 'caca', 'caca', '', '', 3);
+('mail1@edu.ece.fr', 'mdp1', 'Marie', 'Yayawi', 'base.jpg', 'pcbase.jpg', 1),
+('mail2@edu.ece.fr', 'mdp2', 'amandine', 'duc', 'base.jpg', 'Piscine-Bora-Debord-120-5-768x374.jpg', 2),
+('caca', 'caca', 'caca', 'caca', 'base.jpg', 'pcbase.jpg', 3);
 
 -- --------------------------------------------------------
 
@@ -160,9 +160,23 @@ DROP TABLE IF EXISTS `emplois`;
 CREATE TABLE IF NOT EXISTS `emplois` (
   `IDemploi` int(11) NOT NULL,
   `Titre` varchar(255) NOT NULL,
-  `Tel` int(11) NOT NULL,
-  `Logo` blob NOT NULL
+  `Tel` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `emplois`
+--
+
+INSERT INTO `emplois` (`IDemploi`, `Titre`, `Tel`) VALUES
+(1, 'Stagiaire ECE Paris\r\nService EDT', 123),
+(2, 'Vendeur de Hot Dogs', 45),
+(3, 'Chercheur en Pokemon', 456),
+(4, 'Cuisinier a la KFet E2', 5678),
+(5, 'Femme de menage', 5678),
+(6, 'Distributeur de tracts', 789),
+(7, 'test', 5),
+(8, 'er', 4),
+(9, 'Assitant Soutenance de Projet Web ', 123456);
 
 -- --------------------------------------------------------
 
@@ -261,7 +275,9 @@ CREATE TABLE IF NOT EXISTS `publication` (
 INSERT INTO `publication` (`IDPub`, `Texte`, `Lieu`, `Date`, `NbLikes`, `humeur`, `Emploi`) VALUES
 (1, 'Le web c\'est vraiment trop genial !', 'Paris', '2018-05-15', 2, 'Colère', 'Non'),
 (2, 'Qui veut manger avec moi ?', 'PAris', '2018-05-01', 123456789, 'J\'ai faim', 'Non'),
-(3, 'Lolololo', 'Chez soso', '2018-05-03', 34, 'Content', 'Non');
+(3, 'Lolololo', 'Chez soso', '2018-05-03', 34, 'Content', 'Non'),
+(5, 'Franchement, la piscine c\'est gé-nial, on bronze et tout', 'Maroc', '2018-05-16', 3145, 'Content', 'Non'),
+(6, 'Par contre, bon 6 degres pour aller a la piscine c\'est pas ouf non plus ?', 'Finistere', '2018-05-01', 4, 'Colère', 'Non');
 
 -- --------------------------------------------------------
 
@@ -284,9 +300,11 @@ CREATE TABLE IF NOT EXISTS `publie` (
 --
 
 INSERT INTO `publie` (`IDutilisateur`, `IDpub`) VALUES
-(2, 2),
 (1, 1),
-(1, 3);
+(1, 2),
+(1, 3),
+(1, 5),
+(2, 6);
 
 -- --------------------------------------------------------
 
@@ -310,8 +328,16 @@ CREATE TABLE IF NOT EXISTS `recevoirmessages` (
 
 DROP TABLE IF EXISTS `reseaupro`;
 CREATE TABLE IF NOT EXISTS `reseaupro` (
-  `ID` int(11) NOT NULL
+  `ID` int(11) NOT NULL,
+  `IDcollegue` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `reseaupro`
+--
+
+INSERT INTO `reseaupro` (`ID`, `IDcollegue`) VALUES
+(2, 3);
 
 -- --------------------------------------------------------
 

@@ -40,11 +40,13 @@ if(isset($_GET['name']) AND isset($_GET['Surename']) AND isset($_GET['email']) A
 		{
 			if($username==$confirm)
 			{
+				try{
+					
 				$lemax = $bdd->query('SELECT MAX(ID) AS ID FROM auteur');
 				
 				$mavaleur = $lemax->fetch();
 				
-				$monom = $bdd->prepare('INSERT INTO auteur(adresse_mail, mdp, prenom, nom, ID, photodepp) VALUES (:adresse_mail,:mdp,:prenom,:nom, :ID, :photodepp)');
+				$monom = $bdd->prepare('INSERT INTO auteur(adresse_mail, mdp, prenom, nom, ID, photodepp, photodecouv) VALUES (:adresse_mail,:mdp,:prenom,:nom, :ID, :photodepp, :photodecouv)');
 				$monom->execute(array(
 					'adresse_mail' => $adresse_mail,
 					'mdp' => $username,
@@ -52,8 +54,15 @@ if(isset($_GET['name']) AND isset($_GET['Surename']) AND isset($_GET['email']) A
 					'nom' => $name,
 					'ID' => $mavaleur['ID']+1,
 					'photodepp' => 'base.jpg',
+					 'photodecouv' => 'pcbase.jpg',
 					));	
-				header('Location: success2.php');	
+				header('Location: success.php');
+				}
+				catch(Exception $e)
+				{
+					// En cas d'erreur, on affiche un message et on arrête tout
+					die('Erreur : '.$e->getMessage());
+				}
 			}
 			else
 			{

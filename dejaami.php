@@ -1,3 +1,10 @@
+<?php
+
+session_start();
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 <title>PloufBook</title>
@@ -43,7 +50,7 @@
 	<header class="header_pageAdmin">
 		<div id="titre_page">
 
-			<h1>Utilisateur ajouté</h1>
+			<h1>Vous êtes déjà amis</h1>
 		</div>
 
 	</header>
@@ -55,7 +62,7 @@
 					<div class="col-sm-12">
 						<div class="main-login main-center">
 								<div class="form-group ">
-									<a href="Connexion.php"><button type="submit" class="btn btn-primary btn-lg btn-block login-button">Retour Connexion</button></a>
+									<a href="profil.php"><button type="submit" class="btn btn-primary btn-lg btn-block login-button">Retour profil</button></a>
 								</div>
 						</div>
 					</div>

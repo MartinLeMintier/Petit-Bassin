@@ -16,11 +16,20 @@ if(isset($_GET['search']))
 	{		
 		$name = $_GET['search'];
 		$pieces = explode(" ", $name);
-		$nom = $pieces[0];
-		$nom2 = $pieces[1];
-		$prenom = $pieces[1];
-		$prenom2 = $pieces[0];
-	
+		
+		if(count($pieces)==2)
+		{
+			$nom = $pieces[0];
+			$nom2 = $pieces[1];
+			$prenom = $pieces[1];
+			$prenom2 = $pieces[0];
+		}
+		else
+		{
+			echo 'probleme';
+			header('Location: problemerecherche.php');
+			exit;
+		}
 		
 		try
 		{
@@ -45,7 +54,9 @@ if(isset($_GET['search']))
 		
 		    $donnees = $lenom->fetch();
 			$donnees2 = $lenom2->fetch();
-			
+			if($donnees OR $donnees2)
+			{
+				
 				if($donnees['nom']==$nom2)
 				{
 					$_SESSION['nomrecherche']=$donnees['nom'];
@@ -56,7 +67,6 @@ if(isset($_GET['search']))
 						$_SESSION['photorecherche']=$donnees['photodepp'];
 						$_SESSION['photodecouvrecherche']=$donnees['photodecouv'];
 						header('Location: profilrecherche.php');
-						exit;
 						
 					}
 					if( $prenom2==$donnees['prenom'])
@@ -85,8 +95,9 @@ if(isset($_GET['search']))
 					}
 						
 				}
-				if($donnees2['nom']==$nom)
+				else if($donnees2['nom']==$nom)
 				{
+					echo 'nom2';
 					$_SESSION['nomrecherche']=$donnees2['nom'];
 					if($prenom==$donnees['prenom'])
 					{
@@ -122,14 +133,16 @@ if(isset($_GET['search']))
 					}
 						
 				}
+			}
+			else
+				header('Location: problemerecherche.php');
 			
 	}
 		// On affiche chaque entrée une à une
 		//$reponse->closeCursor(); // Termine le traitement de la requête
-	}
+		
+}
 
-//header('Location: problemeemail.php');
-?> <p> adresse mail inexistante<p> <?php
-?><a href="Connexion.php">retourner au menu principale</a><?php
+
 
 ?>

@@ -138,7 +138,7 @@
 								<div class="cols-sm-10">
 									<div class="input-group">
 										<span class="input-group-addon"><i class="fa fa-at" aria-hidden="true"></i></span>
-										<input type="text" required class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+										<input type="text" pattern="[a-z0-9._%+-]+@[a-z09.-]+\.[a-z]{2,3}$" required class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
 									</div>
 								</div>
 							</div>

@@ -50,7 +50,7 @@ session_start();
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><div class="search-container">
-    <form action="/action_page.php">
+    <form action="recherche.php">
       <input type="text" placeholder="Rechercher..." name="search">
       <button type="submit"><i class="glyphicon glyphicon-search"></i></button>
     </form></li>

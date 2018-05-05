@@ -28,7 +28,7 @@ if (isset($_FILES['monfichier']) AND $_FILES['monfichier']['error'] == 0)
           
 
           $_SESSION['PP']=$fichier;
-          //header('Location: profil.php');
+          header('Location: profil.php');
 
 
 
